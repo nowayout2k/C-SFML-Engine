@@ -1,5 +1,5 @@
 #pragma once
 class IUpdatable
 {
-	virtual void Update() = 0;
+	virtual void Update(double deltatime) = 0;
 };

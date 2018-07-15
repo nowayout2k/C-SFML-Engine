@@ -2,24 +2,26 @@
 #include "GameManager.h"
 #include "Debug.h"
 
-GameManager::GameManager() : player(new Player())
+GameManager::GameManager()
 {
-	Debug::Log("Player Created");
+	sceneManager.LoadScene(SceneManager::EScenes::GameScene);
 }
 
 
 GameManager::~GameManager()
 {
+
 }
 
-void GameManager::UpdateObjects()
+void GameManager::UpdateObjects(double deltatime)
 {
+	sceneManager.UpdateScenes(deltatime);
 }
 
 void GameManager::RenderObjects(sf::RenderWindow& window)
 {
-	player->Render(window);
-
+	sceneManager.RenderScenes(window);
 }
+ 
 
  
