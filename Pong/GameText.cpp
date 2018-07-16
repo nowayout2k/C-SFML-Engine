@@ -1,0 +1,64 @@
+#include "stdafx.h"
+#include "GameText.h"
+
+
+GameText::GameText(sf::Vector2f position, float rotation, sf::Vector2f scale)
+{
+	text.setPosition(position);
+	text.setRotation(rotation);
+	text.setScale(scale);
+}
+
+
+GameText::~GameText()
+{
+}
+
+sf::Vector2f GameText::GetPosition() const
+{
+	return text.getPosition();
+}
+
+void GameText::SetPosition(const sf::Vector2f & pos)
+{
+	text.setPosition(pos);
+}
+
+ 
+
+float GameText::GetRotation() const
+{
+	return text.getRotation();
+}
+
+void GameText::SetRotation(const float rotation)
+{
+	text.setRotation(rotation);
+}
+
+sf::Vector2f GameText::GetScale() const
+{
+	return text.getScale();
+}
+
+void GameText::SetScale(const sf::Vector2f & scale)
+{
+	text.setScale(scale);
+}
+
+void GameText::SetFont(const sf::Font & font)
+{
+	text.setFont(font);
+}
+void GameText::SetText(std::string str)
+{
+	text.setString(str);
+}
+void GameText::SetColor(sf::Color color)
+{
+	text.setFillColor(color);
+}
+void GameText::Render(sf::RenderWindow & window)
+{
+	window.draw(text);
+}

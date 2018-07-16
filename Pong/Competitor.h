@@ -1,8 +1,8 @@
 #pragma once
-#include "SpriteImage.h"
+#include "GameSprite.h"
 #include "IUpdatable.h"
 
-class Competitor : public SpriteImage, public IUpdatable
+class Competitor : public GameSprite, public IUpdatable
 {
 public:
 	Competitor(sf::Vector2f pos, float rotation, sf::Vector2f scale);

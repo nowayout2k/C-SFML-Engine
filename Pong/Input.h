@@ -1,5 +1,8 @@
 #pragma once
-class Input
+#include "Subject.h"
+#include "InputEvent.h"
+
+class Input : public Subject
 {
 public:
 	Input();
