@@ -15,10 +15,12 @@ public:
 	virtual void SetRotation(const float rotation) override;
 	virtual sf::Vector2f GetScale() const override;
 	virtual void SetScale(const sf::Vector2f& scale) override;
-	virtual void SetTexture(const sf::Texture& texture);
+	virtual void SetTexture(std::string filename);
+
 	// Inherited via IRenderable
 	virtual void Render(sf::RenderWindow & window) override;
 private:
 	sf::Sprite sprite;
+	sf::Texture texture;
 };
 

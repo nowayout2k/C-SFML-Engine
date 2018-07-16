@@ -10,11 +10,11 @@ class Subject
 public:
 	Subject();
 	virtual ~Subject();
-	void AddObserver(IObserver* const observer);
-	void RemoveObserver(IObserver* const observer);
-	void Notify(std::shared_ptr<GameEvent> gameEvent);
+	static void AddObserver(IObserver* const observer);
+	static void RemoveObserver(IObserver* const observer);
+	static void Notify(std::shared_ptr<GameEvent> gameEvent);
 private:
-	std::vector<IObserver*> observers;
+	static std::vector<IObserver*> observers;
 	
 };
 

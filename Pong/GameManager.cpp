@@ -4,23 +4,28 @@
 
 GameManager::GameManager()
 {
+
+	debug.reset(new Debug());
+	Input::AddObserver(debug.get());
 	sceneManager.LoadScene(SceneManager::EScenes::GameScene);
 }
 
 
 GameManager::~GameManager()
 {
-
+	Input::RemoveObserver(debug.get());
 }
 
 void GameManager::UpdateObjects(double deltatime)
 {
 	sceneManager.UpdateScenes(deltatime);
+	debug->Update(deltatime);
 }
 
 void GameManager::RenderObjects(sf::RenderWindow& window)
 {
 	sceneManager.RenderScenes(window);
+	debug->Render(window);
 }
  
 

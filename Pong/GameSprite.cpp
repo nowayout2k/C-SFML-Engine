@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include "GameSprite.h"
-
+#include "Debug.h"
 
 GameSprite::GameSprite(sf::Vector2f position, float rotation, sf::Vector2f scale)
 {
@@ -43,9 +43,12 @@ void GameSprite::SetScale(const sf::Vector2f & scale)
 	sprite.setScale(scale);
 }
 
-void GameSprite::SetTexture(const sf::Texture & texture)
+void GameSprite::SetTexture(std::string filename)
 {
-	sprite.setTexture(texture);
+	if (this->texture.loadFromFile("Textures/" + filename))
+		sprite.setTexture(this->texture);
+	else
+		Debug::Log("Could not find file "+ filename);
 }
 
 void GameSprite::Render(sf::RenderWindow & window)

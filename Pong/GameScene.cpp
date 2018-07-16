@@ -4,13 +4,7 @@
 
 GameScene::GameScene(): player(sf::Vector2f(0, 50), 0.0f, sf::Vector2f())
 {
-	sf::Texture texture;
-
-	if (texture.loadFromFile("Textures/Paddle.png"))
-		player.SetTexture(texture);
-	else
-		Debug::LogError("Could not load file for player! ");
-
+	player.SetTexture("Paddle.png");
  
 }
 

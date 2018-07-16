@@ -10,6 +10,7 @@ Subject::Subject()
 Subject::~Subject()
 {
 }
+std::vector<IObserver*> Subject::observers;
 
 void Subject::AddObserver(IObserver* const observer)
 {

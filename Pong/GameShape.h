@@ -1,6 +1,7 @@
 #pragma once
 #include "IEntity.h"
 #include "IRenderable.h"
+#include <memory>
 
 class GameShape : public IEntity, public IRenderable
 {
@@ -16,12 +17,13 @@ public:
 	virtual sf::Vector2f GetScale() const override;
 	virtual void SetScale(const sf::Vector2f& scale) override;
 
-	virtual void SetTexture(const sf::Texture* const texture);
+	virtual void SetTexture(std::string filename);
 
 	// Inherited via IRenderable
 	virtual void Render(sf::RenderWindow & window) override;
 
 private:
-	sf::Shape* shape;
+	std::unique_ptr<sf::Shape> shape;
+	std::unique_ptr<sf::Texture> texture;
 };
 

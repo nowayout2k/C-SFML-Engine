@@ -4,15 +4,9 @@
 #include "SFML/Graphics.hpp"
 #include <iostream>
 
-Debug::Debug() :GameText(sf::Vector2f(), 0.0f, sf::Vector2f())
+Debug::Debug() :GameText(sf::Vector2f(0,0), 0.0f, sf::Vector2f(1,1))
 {
-	sf::Font font;
-	if (!font.loadFromFile("Fonts/arial.ttf"))
-	{
-		Log("Could not load font!");
-	}
-	SetFont(font);
-	SetText("TEST!!!");
+	SetFont("arial.ttf");
 	SetColor(sf::Color::White);
 }
 
@@ -37,8 +31,24 @@ void Debug::OnNotify(std::shared_ptr<GameEvent> gameEvent)
 	{
 		if (inputEvent->HasKey(sf::Keyboard::D))
 		{
-			Debug::Log("D has been pressed!");
+			enabled = !enabled;
+			FPS.restart();
 		}
 	}
 }
+
+void Debug::Update(double deltatime)
+{
+	SetText(std::to_string(1/(FPS.restart().asMicroseconds()*.000001)));
+}
+
+void Debug::Render(sf::RenderWindow& window)
+{
+	if (enabled)
+	{
+		GameText::Render(window);
+	}
+}
+
+
  

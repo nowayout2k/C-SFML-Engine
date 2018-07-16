@@ -31,14 +31,8 @@
     <Filter Include="Source Files\Scenes">
       <UniqueIdentifier>{37fcf97d-9000-4064-8bc2-68f7a51c93fe}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Visual Abstracts">
-      <UniqueIdentifier>{e8bd7eb2-d5f8-4431-9bbf-b8b136dae81c}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\Interfaces">
       <UniqueIdentifier>{f9e23c6f-33b5-4a95-80e9-dfe0d4cc0572}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Visual Abstacts">
-      <UniqueIdentifier>{ae435209-c968-4573-9131-71a0817c44d7}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\GameObjects">
       <UniqueIdentifier>{b0a4fca5-2e80-45bb-ad7d-5764488fde4e}</UniqueIdentifier>
@@ -55,13 +49,16 @@
     <Filter Include="Header Files\Events">
       <UniqueIdentifier>{67061491-cb81-4385-bac3-74109da7dc0c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Game Visuals">
+      <UniqueIdentifier>{ae435209-c968-4573-9131-71a0817c44d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Game Visuals">
+      <UniqueIdentifier>{e8bd7eb2-d5f8-4431-9bbf-b8b136dae81c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameManager.h">
       <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Debug.h">
-      <Filter>Header Files\Debug</Filter>
     </ClInclude>
     <ClInclude Include="IEntity.h">
       <Filter>Header Files\Interfaces</Filter>
@@ -103,19 +100,22 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="GameShape.h">
-      <Filter>Header Files\Visual Abstacts</Filter>
+      <Filter>Header Files\Game Visuals</Filter>
     </ClInclude>
     <ClInclude Include="GameSprite.h">
-      <Filter>Header Files\Visual Abstacts</Filter>
+      <Filter>Header Files\Game Visuals</Filter>
     </ClInclude>
     <ClInclude Include="GameText.h">
-      <Filter>Header Files\Visual Abstacts</Filter>
+      <Filter>Header Files\Game Visuals</Filter>
     </ClInclude>
     <ClInclude Include="GameEvent.h">
       <Filter>Header Files\Events</Filter>
     </ClInclude>
     <ClInclude Include="InputEvent.h">
       <Filter>Header Files\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="Debug.h">
+      <Filter>Header Files\Debug</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -124,9 +124,6 @@
     </ClCompile>
     <ClCompile Include="GameManager.cpp">
       <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Debug.cpp">
-      <Filter>Source Files\Debug</Filter>
     </ClCompile>
     <ClCompile Include="GameScene.cpp">
       <Filter>Source Files\Scenes</Filter>
@@ -147,13 +144,16 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="GameShape.cpp">
-      <Filter>Source Files\Visual Abstracts</Filter>
+      <Filter>Source Files\Game Visuals</Filter>
     </ClCompile>
     <ClCompile Include="GameSprite.cpp">
-      <Filter>Source Files\Visual Abstracts</Filter>
+      <Filter>Source Files\Game Visuals</Filter>
     </ClCompile>
     <ClCompile Include="GameText.cpp">
-      <Filter>Source Files\Visual Abstracts</Filter>
+      <Filter>Source Files\Game Visuals</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug.cpp">
+      <Filter>Source Files\Debug</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
