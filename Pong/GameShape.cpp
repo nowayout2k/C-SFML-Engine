@@ -2,8 +2,12 @@
 #include "GameShape.h"
 #include "Debug.h"
 
-GameShape::GameShape(sf::Shape* shape, sf::Vector2f position, float rotation, sf::Vector2f scale)
+GameShape::GameShape(std::string filename, sf::Shape* shape, sf::Vector2f position, float rotation, sf::Vector2f scale)
 {
+	if (this->texture->loadFromFile("Textures/" + filename))
+		shape->setTexture(this->texture.get());
+	else
+		Debug::Log("Could not find file " + filename);
 	this->shape.reset(shape);
 	this->shape->setPosition(position);
 	this->shape->setRotation(rotation);
@@ -46,13 +50,7 @@ void GameShape::SetScale(const sf::Vector2f & scale)
 	shape->setScale(scale);
 }
 
-void GameShape::SetTexture(std::string filename)
-{
-	if (this->texture->loadFromFile("Textures/" + filename))
-		shape->setTexture(this->texture.get());
-	else
-		Debug::Log("Could not find file " + filename);
-}
+ 
 
  
 

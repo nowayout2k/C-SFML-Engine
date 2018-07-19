@@ -13,6 +13,6 @@ public:
 	virtual void Update(double deltatime) override;
 
 private:
-	Competitor player;
+	std::unique_ptr<Competitor> player;
 };
 

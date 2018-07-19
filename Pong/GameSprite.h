@@ -5,7 +5,7 @@
 class GameSprite : public IEntity, public IRenderable
 {
 public:
-	GameSprite(sf::Vector2f position, float rotation, sf::Vector2f scale);
+	GameSprite(std::string filename, sf::Vector2f position, float rotation, sf::Vector2f scale);
 	virtual ~GameSprite();
 
 	// Inherited via IEntity
@@ -15,7 +15,6 @@ public:
 	virtual void SetRotation(const float rotation) override;
 	virtual sf::Vector2f GetScale() const override;
 	virtual void SetScale(const sf::Vector2f& scale) override;
-	virtual void SetTexture(std::string filename);
 
 	// Inherited via IRenderable
 	virtual void Render(sf::RenderWindow & window) override;

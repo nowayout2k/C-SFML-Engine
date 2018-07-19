@@ -2,7 +2,8 @@
 #include "Competitor.h"
 
 
-Competitor::Competitor(sf::Vector2f pos, float rotation, sf::Vector2f scale) : GameSprite(pos, rotation, scale)
+Competitor::Competitor(std::string textureName, sf::Vector2f pos, float rotation, sf::Vector2f scale)
+	: GameSprite(textureName, pos, rotation, scale)
 {
 
 }

@@ -4,9 +4,8 @@
 #include "SFML/Graphics.hpp"
 #include <iostream>
 
-Debug::Debug() :GameText(sf::Vector2f(0,0), 0.0f, sf::Vector2f(1,1))
+Debug::Debug() : GameText("arial.ttf", sf::Vector2f(0,0), 0.0f, sf::Vector2f(1,1))
 {
-	SetFont("arial.ttf");
 	SetColor(sf::Color::White);
 }
 

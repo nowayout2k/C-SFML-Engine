@@ -5,7 +5,7 @@
 class Competitor : public GameSprite, public IUpdatable
 {
 public:
-	Competitor(sf::Vector2f pos, float rotation, sf::Vector2f scale);
+	Competitor(std::string textureName, sf::Vector2f pos, float rotation, sf::Vector2f scale);
 	virtual ~Competitor();
 
 	// Inherited via Entity

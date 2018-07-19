@@ -2,8 +2,13 @@
 #include "GameText.h"
 #include "Debug.h"
 
-GameText::GameText(sf::Vector2f position, float rotation, sf::Vector2f scale)
+GameText::GameText(std::string filename, sf::Vector2f position, float rotation, sf::Vector2f scale)
 {
+	if (this->font.loadFromFile("Fonts/" + filename))
+		text.setFont(this->font);
+	else
+		Debug::Log("Could not find file " + filename);
+
 	text.setPosition(position);
 	text.setRotation(rotation);
 	text.setScale(scale);
@@ -43,13 +48,7 @@ void GameText::SetScale(const sf::Vector2f & scale)
 	text.setScale(scale);
 }
 
-void GameText::SetFont(std::string filename)
-{
-	if (this->font.loadFromFile("Fonts/" + filename))
-		text.setFont(this->font);
-	else
-		Debug::Log("Could not find file "+ filename);
-}
+ 
 void GameText::SetText(std::string str)
 {
 	text.setString(str);
