@@ -12,7 +12,11 @@ class GameManager
 public:
 	GameManager();
 	~GameManager();
+
+	/*Update Game*/
 	void UpdateObjects(double deltatime);
+
+	/*Draw Game*/
 	void RenderObjects(sf::RenderWindow& window);
 private:
 	SceneManager sceneManager;

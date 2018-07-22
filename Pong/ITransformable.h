@@ -1,11 +1,12 @@
 #pragma once
 #include "SFML/Graphics.hpp"
 
-class IEntity
+/*Extendable class for classes that have position,rotation and scale*/
+class ITransformable
 {
 public:
-	IEntity() {}
-	virtual ~IEntity() {}
+	ITransformable() {}
+	virtual ~ITransformable() {}
 
 	//accessors
 	virtual sf::Vector2f GetPosition() const = 0;

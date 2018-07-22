@@ -69,9 +69,6 @@
     <ClInclude Include="GameManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="IEntity.h">
-      <Filter>Header Files\Interfaces</Filter>
-    </ClInclude>
     <ClInclude Include="IRenderable.h">
       <Filter>Header Files\Interfaces</Filter>
     </ClInclude>
@@ -128,6 +125,9 @@
     </ClInclude>
     <ClInclude Include="Subject.h">
       <Filter>Header Files\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="ITransformable.h">
+      <Filter>Header Files\Interfaces</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

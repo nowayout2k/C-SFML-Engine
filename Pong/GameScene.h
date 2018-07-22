@@ -2,6 +2,7 @@
 #include "Scene.h"
 #include "Competitor.h"
 
+//Scene for gameplay
 class GameScene : public Scene
 {
 public:
@@ -10,6 +11,8 @@ public:
 
 	// Inherited via Scene
 	virtual void Render(sf::RenderWindow & window) override;
+
+	// Inherited via Scene
 	virtual void Update(double deltatime) override;
 
 private:
