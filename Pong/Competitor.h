@@ -1,6 +1,7 @@
 #pragma once
 #include "SFML/Graphics.hpp"
 #include "Entity.h"
+#include "IObserver.h"
 
 /*an active participate in a game*/
 class Competitor : public Entity
@@ -20,8 +21,11 @@ public:
 	// Inherited via Entity
 	virtual void Update(double deltatime) override;
 
-private:
+	virtual sf::Sprite* const GetSprite() const { return sprite; }
+
+protected:
 	sf::Sprite* sprite;
 	sf::Texture texture;
+
 };
 

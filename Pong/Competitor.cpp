@@ -2,9 +2,11 @@
 #include "Competitor.h"
 #include "Debug.h"
 
+
 Competitor::Competitor(std::string textureName, sf::Sprite* sprite, sf::Vector2f pos, float rotation, sf::Vector2f scale)
 	: Entity(sprite, pos, rotation, scale)
 {
+
 	this->sprite=sprite;
 	if (texture.loadFromFile("Textures/" + textureName))
 	{
@@ -24,6 +26,8 @@ void Competitor::Update(double deltatime)
 {
 
 }
+
+
 
 void Competitor::Render(sf::RenderWindow & window)
 {

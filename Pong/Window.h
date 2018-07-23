@@ -16,4 +16,4 @@ private:
 	static sf::RenderWindow _window;
 };
  
-sf::RenderWindow Window::_window(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), "Pong", sf::Style::Titlebar);
+

@@ -17,13 +17,13 @@ public:
 
 	virtual void Render(sf::RenderWindow & window)=0;
 	virtual void Update(double deltatime)=0;
-	sf::Transformable* const GetGameObject() { return gameObject.get(); }
+	sf::Transformable* const GetTransform() { return transform.get(); }
 	void Kill();
 	bool IsAlive() const { return isAlive; };
 	int GetId() const { return id; }
 protected:
 	bool isAlive;
-	std::unique_ptr<sf::Transformable> gameObject;
+	std::unique_ptr<sf::Transformable> transform;
 	int id;
 private:
 	static int nextID;

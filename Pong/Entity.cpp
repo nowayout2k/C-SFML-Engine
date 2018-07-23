@@ -9,10 +9,10 @@ Entity::Entity(sf::Transformable* entity, sf::Vector2f position, float rotation,
 {
 	isAlive = true;
 	this->id = nextID++;
-	this->gameObject.reset(entity);
-	this->gameObject->setPosition(position);
-	this->gameObject->setRotation(rotation);
-	this->gameObject->setScale(scale);
+	this->transform.reset(entity);
+	this->transform->setPosition(position);
+	this->transform->setRotation(rotation);
+	this->transform->setScale(scale);
 }
 
 
