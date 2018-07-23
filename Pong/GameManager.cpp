@@ -5,7 +5,7 @@
 GameManager::GameManager()
 {
 
-	debug.reset(new Debug());
+	debug.reset(new Debug("arial.ttf",new sf::Text()));
 	Input::AddObserver(debug.get());
 	sceneManager.LoadScene(SceneManager::EScenes::GameScene);
 }

@@ -1,6 +1,5 @@
 #pragma once
 #include "GameEvent.h"
-#include "ITransformable.h"
 #include <memory>
 
 class IObserver

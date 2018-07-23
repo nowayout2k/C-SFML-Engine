@@ -1,23 +1,26 @@
 #pragma once
-#include "IRenderable.h"
-#include "IUpdatable.h"
+#include <vector>
+#include <unordered_map>
+#include "Entity.h"
 
 /*Extendable class for Scenes*/
-class Scene : public IRenderable, public IUpdatable
+class Scene
 {
 public:
 	Scene() {};
 	virtual ~Scene() {};
 
-	// Inherited via IRenderable
-	virtual void Render(sf::RenderWindow & window) override = 0;
+	virtual void Render(sf::RenderWindow & window);
+	virtual void Update(double deltatime);
 
-	// Inherited via IUpdatable
-	virtual void Update(double deltatime) override = 0;
+	void AddEntity(Entity* const entity);
+	void RemoveEntity(int id);
 
 	//return name of scene
 	std::string GetName() { return name; }
 protected:
 	std::string name;
+	std::unordered_map<int, std::unique_ptr<Entity>> entities;
+	std::vector<int> deadEntities;
 };
 

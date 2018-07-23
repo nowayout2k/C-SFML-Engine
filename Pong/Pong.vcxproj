@@ -159,22 +159,17 @@
     <ClInclude Include="Debug.h" />
     <ClInclude Include="GameEvent.h" />
     <ClInclude Include="GameScene.h" />
-    <ClInclude Include="ITransformable.h" />
     <ClInclude Include="GameManager.h" />
     <ClInclude Include="Input.h" />
     <ClInclude Include="InputEvent.h" />
     <ClInclude Include="IObserver.h" />
-    <ClInclude Include="IRenderable.h" />
-    <ClInclude Include="IUpdatable.h" />
     <ClInclude Include="Competitor.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="SceneManager.h" />
-    <ClInclude Include="GameShape.h" />
-    <ClInclude Include="GameSprite.h" />
+    <ClInclude Include="Entity.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="Subject.h" />
     <ClInclude Include="targetver.h" />
-    <ClInclude Include="GameText.h" />
     <ClInclude Include="Window.h" />
   </ItemGroup>
   <ItemGroup>
@@ -185,9 +180,9 @@
     <ClCompile Include="Input.cpp" />
     <ClCompile Include="Competitor.cpp" />
     <ClCompile Include="Pong.cpp" />
+    <ClCompile Include="Scene.cpp" />
     <ClCompile Include="SceneManager.cpp" />
-    <ClCompile Include="GameShape.cpp" />
-    <ClCompile Include="GameSprite.cpp" />
+    <ClCompile Include="Entity.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -195,7 +190,6 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Subject.cpp" />
-    <ClCompile Include="GameText.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -49,12 +49,6 @@
     <Filter Include="Header Files\Events">
       <UniqueIdentifier>{67061491-cb81-4385-bac3-74109da7dc0c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Game Visuals">
-      <UniqueIdentifier>{ae435209-c968-4573-9131-71a0817c44d7}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Game Visuals">
-      <UniqueIdentifier>{e8bd7eb2-d5f8-4431-9bbf-b8b136dae81c}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\Sound">
       <UniqueIdentifier>{4404aadd-e74a-4587-a8f5-2dabdf3510d0}</UniqueIdentifier>
     </Filter>
@@ -68,12 +62,6 @@
   <ItemGroup>
     <ClInclude Include="GameManager.h">
       <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="IRenderable.h">
-      <Filter>Header Files\Interfaces</Filter>
-    </ClInclude>
-    <ClInclude Include="IUpdatable.h">
-      <Filter>Header Files\Interfaces</Filter>
     </ClInclude>
     <ClInclude Include="Input.h">
       <Filter>Header Files\Input</Filter>
@@ -102,15 +90,6 @@
     <ClInclude Include="IObserver.h">
       <Filter>Header Files\Interfaces</Filter>
     </ClInclude>
-    <ClInclude Include="GameShape.h">
-      <Filter>Header Files\Game Visuals</Filter>
-    </ClInclude>
-    <ClInclude Include="GameSprite.h">
-      <Filter>Header Files\Game Visuals</Filter>
-    </ClInclude>
-    <ClInclude Include="GameText.h">
-      <Filter>Header Files\Game Visuals</Filter>
-    </ClInclude>
     <ClInclude Include="GameEvent.h">
       <Filter>Header Files\Events</Filter>
     </ClInclude>
@@ -126,8 +105,8 @@
     <ClInclude Include="Subject.h">
       <Filter>Header Files\Events</Filter>
     </ClInclude>
-    <ClInclude Include="ITransformable.h">
-      <Filter>Header Files\Interfaces</Filter>
+    <ClInclude Include="Entity.h">
+      <Filter>Header Files\GameObjects</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -152,15 +131,6 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>Source Files\System</Filter>
     </ClCompile>
-    <ClCompile Include="GameShape.cpp">
-      <Filter>Source Files\Game Visuals</Filter>
-    </ClCompile>
-    <ClCompile Include="GameSprite.cpp">
-      <Filter>Source Files\Game Visuals</Filter>
-    </ClCompile>
-    <ClCompile Include="GameText.cpp">
-      <Filter>Source Files\Game Visuals</Filter>
-    </ClCompile>
     <ClCompile Include="Debug.cpp">
       <Filter>Source Files\Debug</Filter>
     </ClCompile>
@@ -169,6 +139,12 @@
     </ClCompile>
     <ClCompile Include="Subject.cpp">
       <Filter>Source Files\Events</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity.cpp">
+      <Filter>Source Files\GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

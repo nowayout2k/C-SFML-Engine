@@ -4,9 +4,15 @@
 #include "SFML/Graphics.hpp"
 #include <iostream>
 
-Debug::Debug() : GameText("arial.ttf", sf::Vector2f(0,0), 0.0f, sf::Vector2f(1,1))
+Debug::Debug(std::string fontname, sf::Text* text) : Entity(text, sf::Vector2f(0, 0), 0.0f, sf::Vector2f(1, 1))
 {
-	SetColor(sf::Color::White);
+	this->text=text;
+	if (font.loadFromFile("Fonts/" + fontname))
+		text->setFont(font);
+	else
+		LogError("Could not find font!");
+
+	text->setFillColor(sf::Color::White);
 }
 
 
@@ -38,14 +44,14 @@ void Debug::OnNotify(std::shared_ptr<GameEvent> gameEvent)
 
 void Debug::Update(double deltatime)
 {
-	SetText(std::to_string(1/(FPS.restart().asMicroseconds()*.000001)));
+	text->setString(std::to_string(1/(FPS.restart().asMicroseconds()*.000001)));
 }
 
 void Debug::Render(sf::RenderWindow& window)
 {
 	if (enabled)
 	{
-		GameText::Render(window);
+		window.draw(*text, sf::RenderStates::Default);
 	}
 }
 

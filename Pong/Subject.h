@@ -1,6 +1,5 @@
 #pragma once
 #include "IObserver.h"
-#include "ITransformable.h"
 #include "GameEvent.h"
 #include <vector>
 #include <memory>

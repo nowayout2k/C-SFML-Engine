@@ -1,14 +1,13 @@
 #pragma once
 #include <string>
 #include "IObserver.h"
-#include "GameText.h"
-#include "IUpdatable.h"
+#include "Entity.h"
 
 /*Display Debugging information*/
-class Debug : public IObserver, public GameText, public IUpdatable
+class Debug : public IObserver, public Entity
 {
 public:
-	Debug();
+	Debug(std::string fontname, sf::Text* text);
 	~Debug();
 
 	/*output a message to the console
@@ -25,16 +24,18 @@ public:
 	@param gameEvent - Event info*/
 	virtual void OnNotify(std::shared_ptr<GameEvent> gameEvent) override;
  
-	// Inherited via IUpdatable
+ 
 	/* Update Debug display*/
-	virtual void Update(double deltatime) override;
+	virtual void Update(double deltatime);
 
 	/*draw Debug text
 	@param window - where to draw*/
-	virtual void Render(sf::RenderWindow& window) override;
+	virtual void Render(sf::RenderWindow& window);
 private:
 	sf::Clock FPS;
 	bool enabled;
+	sf::Text* text;
+	sf::Font font;
  
 };
 

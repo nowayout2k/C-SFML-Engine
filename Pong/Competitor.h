@@ -1,9 +1,9 @@
 #pragma once
-#include "GameSprite.h"
-#include "IUpdatable.h"
+#include "SFML/Graphics.hpp"
+#include "Entity.h"
 
 /*an active participate in a game*/
-class Competitor : public GameSprite, public IUpdatable
+class Competitor : public Entity
 {
 public:
 	/*
@@ -11,7 +11,7 @@ public:
 	@param position - positioning of the sprite [Passed to base class]
 	@param rotation - angle to rotate sprite [Passed to base class]
 	@parma scale - size factor based on inital size of sprite [Passed to base class]*/
-	Competitor(std::string textureName, sf::Vector2f pos, float rotation, sf::Vector2f scale);
+	Competitor(std::string textureName, sf::Sprite* sprite, sf::Vector2f pos, float rotation, sf::Vector2f scale);
 	virtual ~Competitor();
 
 	// Inherited via Entity
@@ -19,5 +19,9 @@ public:
 
 	// Inherited via Entity
 	virtual void Update(double deltatime) override;
+
+private:
+	sf::Sprite* sprite;
+	sf::Texture texture;
 };
 
