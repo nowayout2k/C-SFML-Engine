@@ -156,14 +156,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="AudioManager.h" />
+    <ClInclude Include="Ball.h" />
     <ClInclude Include="Debug.h" />
     <ClInclude Include="GameEvent.h" />
     <ClInclude Include="GameScene.h" />
     <ClInclude Include="GameManager.h" />
+    <ClInclude Include="GameShape.h" />
     <ClInclude Include="Input.h" />
     <ClInclude Include="InputEvent.h" />
     <ClInclude Include="IObserver.h" />
-    <ClInclude Include="Competitor.h" />
+    <ClInclude Include="GameSprite.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="SceneManager.h" />
@@ -175,11 +177,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AudioManager.cpp" />
+    <ClCompile Include="Ball.cpp" />
     <ClCompile Include="Debug.cpp" />
     <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="GameScene.cpp" />
+    <ClCompile Include="GameShape.cpp" />
     <ClCompile Include="Input.cpp" />
-    <ClCompile Include="Competitor.cpp" />
+    <ClCompile Include="GameSprite.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Pong.cpp" />
     <ClCompile Include="Scene.cpp" />

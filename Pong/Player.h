@@ -1,18 +1,18 @@
 #pragma once
-#include "Competitor.h"
+#include "GameSprite.h"
 
 
-class Player :  public Competitor, public IObserver
+class Player :  public GameSprite, public IObserver
 {
 public:
 	Player(std::string textureName, sf::Sprite* sprite, sf::Vector2f pos, float rotation, sf::Vector2f scale);
 	virtual ~Player();
 
 
-	// Inherited via Competitor
+	// Inherited via GameSprite
 	virtual void Render(sf::RenderWindow & window) override;
 
-	// Inherited via Competitor
+	// Inherited via GameSprite
 	virtual void Update(double deltatime) override;
 
 

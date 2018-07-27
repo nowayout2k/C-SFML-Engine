@@ -1,7 +1,6 @@
 #pragma once
 #include "SFML/Graphics.hpp"
 #include "Input.h"
-#include "Competitor.h"
 #include "SceneManager.h"
 #include "Debug.h"
 #include <memory>

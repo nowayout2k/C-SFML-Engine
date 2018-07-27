@@ -5,7 +5,7 @@
 #include "Input.h"
 
 Player::Player(std::string textureName, sf::Sprite* sprite, sf::Vector2f pos, float rotation, sf::Vector2f scale)
-	: Competitor(textureName, sprite, pos, rotation, scale)
+	: GameSprite(textureName, sprite, pos, rotation, scale)
 {
 	Input::AddObserver(this);
 }
@@ -17,12 +17,12 @@ Player::~Player()
 
 void Player::Render(sf::RenderWindow & window)
 {
-	Competitor::Render(window);
+	GameSprite::Render(window);
 }
 
 void Player::Update(double deltatime)
 {
-	Competitor::Update(deltatime);
+	GameSprite::Update(deltatime);
 }
 
 
