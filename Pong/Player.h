@@ -5,7 +5,7 @@
 class Player : public GameSprite, public IObserver
 {
 public:
-	Player(std::string textureName, sf::Sprite* sprite, sf::Vector2f pos, float rotation, sf::Vector2f scale);
+	Player(std::string textureName, sf::Sprite* sprite);
 	virtual ~Player();
 
 

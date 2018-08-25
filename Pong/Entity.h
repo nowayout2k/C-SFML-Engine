@@ -11,7 +11,7 @@ public:
 	@param position - positioning of the object
 	@param rotation - angle to rotate object
 	@parma scale - size factor based on inital size of object*/
-	Entity(sf::Transformable* gameObject, sf::Vector2f position, float rotation, sf::Vector2f scale);
+	Entity(sf::Transformable* gameObject);
 
 	virtual ~Entity();
 

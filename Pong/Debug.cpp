@@ -4,7 +4,7 @@
 #include "SFML/Graphics.hpp"
 #include <iostream>
 
-Debug::Debug(std::string fontname, sf::Text* text) : Entity(text, sf::Vector2f(0, 0), 0.0f, sf::Vector2f(1, 1))
+Debug::Debug(std::string fontname, sf::Text* text) : Entity(text)
 {
 	this->text=text;
 	if (font.loadFromFile("Fonts/" + fontname))
@@ -32,7 +32,7 @@ void Debug::LogError(std::string message)
 
 void Debug::OnNotify(std::shared_ptr<GameEvent> gameEvent)
 {
-	if (InputEvent* inputEvent = static_cast<InputEvent*>(gameEvent.get()))
+	if (InputEvent* inputEvent = dynamic_cast<InputEvent*>(gameEvent.get()))
 	{
 		if (inputEvent->HasKey(sf::Keyboard::D))
 		{

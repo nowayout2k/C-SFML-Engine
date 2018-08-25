@@ -6,7 +6,7 @@
 class Ball : public GameShape, public IObserver
 {
 public:
-	Ball(std::string textureName, sf::CircleShape* circleShape, sf::Vector2f pos, float rotation, sf::Vector2f scale);
+	Ball(std::string textureName, sf::CircleShape* circleShape);
 	virtual ~Ball();
 
 	// Inherited via GameShape
@@ -17,7 +17,7 @@ public:
 
 	virtual sf::CircleShape* const GetShape() const { return circleShape; }
 	void Collision(CollisionEvent* collisionEvent);
-
+	void Respawn();
 protected:
 	sf::CircleShape* circleShape;
 	sf::Vector2<float> direction;

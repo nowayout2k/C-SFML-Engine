@@ -5,14 +5,14 @@
 
 int Entity::nextID = 0;
 
-Entity::Entity(sf::Transformable* entity, sf::Vector2f position, float rotation, sf::Vector2f scale)
+Entity::Entity(sf::Transformable* entity)
 {
 	isAlive = true;
 	this->id = nextID++;
 	this->transform.reset(entity);
-	this->transform->setPosition(position);
-	this->transform->setRotation(rotation);
-	this->transform->setScale(scale);
+	this->transform->setPosition(sf::Vector2f(0,0));
+	this->transform->setRotation(0.0f);
+	this->transform->setScale(sf::Vector2f(1, 1));
 }
 
 

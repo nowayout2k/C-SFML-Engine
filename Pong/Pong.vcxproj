@@ -163,6 +163,7 @@
     <ClInclude Include="GameScene.h" />
     <ClInclude Include="GameManager.h" />
     <ClInclude Include="GameShape.h" />
+    <ClInclude Include="GameText.h" />
     <ClInclude Include="Input.h" />
     <ClInclude Include="InputEvent.h" />
     <ClInclude Include="IObserver.h" />
@@ -171,6 +172,8 @@
     <ClInclude Include="Scene.h" />
     <ClInclude Include="SceneManager.h" />
     <ClInclude Include="Entity.h" />
+    <ClInclude Include="ScoreEvent.h" />
+    <ClInclude Include="ScoreUI.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="Subject.h" />
     <ClInclude Include="targetver.h" />
@@ -183,6 +186,7 @@
     <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="GameScene.cpp" />
     <ClCompile Include="GameShape.cpp" />
+    <ClCompile Include="GameText.cpp" />
     <ClCompile Include="Input.cpp" />
     <ClCompile Include="GameSprite.cpp" />
     <ClCompile Include="Player.cpp" />
@@ -190,6 +194,7 @@
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="SceneManager.cpp" />
     <ClCompile Include="Entity.cpp" />
+    <ClCompile Include="ScoreUI.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

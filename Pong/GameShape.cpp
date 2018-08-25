@@ -3,8 +3,8 @@
 #include "Debug.h"
 
 
-GameShape::GameShape(std::string textureName, sf::Shape* shape, sf::Vector2f pos, float rotation, sf::Vector2f scale)
-	: Entity(shape, pos, rotation, scale)
+GameShape::GameShape(std::string textureName, sf::Shape* shape)
+	: Entity(shape)
 {
 	this->texture.reset(new sf::Texture());
 	this->shape = shape;

@@ -4,8 +4,8 @@
 #include "Window.h"
 #include "Input.h"
 
-Player::Player(std::string textureName, sf::Sprite* sprite, sf::Vector2f pos, float rotation, sf::Vector2f scale)
-	: GameSprite(textureName, sprite, pos, rotation, scale)
+Player::Player(std::string textureName, sf::Sprite* sprite)
+	: GameSprite(textureName, sprite)
 {
 	Input::GetInstance()->AddObserver(this);
 }
@@ -28,7 +28,7 @@ void Player::Update(double deltatime)
 
 void Player::OnNotify(std::shared_ptr<GameEvent> gameEvent)
 {
-	if (auto inputEvent = static_cast<InputEvent*>(gameEvent.get()))
+	if (auto inputEvent = dynamic_cast<InputEvent*>(gameEvent.get()))
 	{
 		if (inputEvent->HasKey(sf::Keyboard::Up))
 		{

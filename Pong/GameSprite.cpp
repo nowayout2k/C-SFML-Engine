@@ -3,8 +3,8 @@
 #include "Debug.h"
 
 
-GameSprite::GameSprite(std::string textureName, sf::Sprite* sprite, sf::Vector2f pos, float rotation, sf::Vector2f scale)
-	: Entity(sprite, pos, rotation, scale)
+GameSprite::GameSprite(std::string textureName, sf::Sprite* sprite)
+	: Entity(sprite)
 {
 	this->texture.reset(new sf::Texture());
 	this->sprite=sprite;

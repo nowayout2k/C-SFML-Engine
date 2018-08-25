@@ -5,6 +5,11 @@
 #include "SFML/Graphics.hpp"
 #include "Ball.h"
 #include "GameSprite.h"
+#include "GameShape.h"
+#include "Player.h"
+#include "Ball.h"
+#include "GameText.h"
+#include "ScoreUI.h"
 
 //Scene for gameplay
 class GameScene : public Scene, public Subject
@@ -18,8 +23,11 @@ public:
 	virtual void Update(double deltatime);
 protected:
 	GameSprite * enemy;
-	GameSprite* player;
-	GameSprite* BG;
+	Player* player;
 	Ball* ball;
+	ScoreUI* enemyScoreUI;
+	ScoreUI* playerScoreUI;
+	GameSprite* BG;
+
 };
 

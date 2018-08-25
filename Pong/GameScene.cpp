@@ -4,27 +4,45 @@
 #include "AudioManager.h"
 #include "Window.h"
 #include "CollisionEvent.h"
-#include "GameShape.h"
-#include "Player.h"
-#include "Ball.h"
+
 
 GameScene::GameScene()
 {
-	enemy = new GameSprite("Paddle.png", new sf::Sprite(), sf::Vector2f(Window::GetSize().x-20, 200), 0.0f, sf::Vector2f(1, 1));
+	enemy = new GameSprite("Paddle.png", new sf::Sprite());
+	enemy->GetTransform()->setPosition(sf::Vector2f(Window::GetSize().x - 20, 200));
 	enemy->GetSprite()->setColor(sf::Color(255, 0, 0));
 	enemy->GetTransform()->move(sf::Vector2f(-enemy->GetSprite()->getLocalBounds().width,0));
-	player = new Player("Paddle.png", new sf::Sprite(), sf::Vector2f(20, 200), 0.0f, sf::Vector2f(1, 1));
-	player->GetSprite()->setColor(sf::Color(0,0,255));
-	BG = new GameSprite("DesertBG.jpg", new sf::Sprite(), sf::Vector2f(0, 0), 0.0f, sf::Vector2f(1, 1));
-	BG->GetSprite()->setScale(Window::GetSize().x/BG->GetSprite()->getLocalBounds().width, Window::GetSize().y / BG->GetSprite()->getLocalBounds().height);
-	ball = new Ball("DesertBG.jpg", new sf::CircleShape(25), sf::Vector2f(Window::GetSize().x/2, Window::GetSize().y/2), 0.0f, sf::Vector2f(1, 1));
 
- 
+	player = new Player("Paddle.png", new sf::Sprite());
+	player->GetTransform()->setPosition(sf::Vector2f(20, 200));
+	player->GetSprite()->setColor(sf::Color(0,0,255));
+
+	BG = new GameSprite("DesertBG.jpg", new sf::Sprite());
+	BG->GetSprite()->setScale(Window::GetSize().x/BG->GetSprite()->getLocalBounds().width, Window::GetSize().y / BG->GetSprite()->getLocalBounds().height);
+
+	ball = new Ball("DesertBG.jpg", new sf::CircleShape(15));
+	ball->Respawn();
+
+	
+	playerScoreUI = new ScoreUI("Player: ","arial.ttf", new sf::Text());
+	playerScoreUI->GetTransform()->setPosition(sf::Vector2f(Window::GetSize().x / 2 - 50, 20));
+	playerScoreUI->GetTransform()->setScale(sf::Vector2f(.5, .5));
+	playerScoreUI->GetText()->setString("Player:  0");
+
+	enemyScoreUI = new ScoreUI("Enemy: ","arial.ttf", new sf::Text());
+	enemyScoreUI->GetTransform()->setPosition(sf::Vector2f(Window::GetSize().x / 2 + 50, 20));
+	enemyScoreUI->GetTransform()->setScale(sf::Vector2f(.5, .5));
+	enemyScoreUI->GetText()->setString("Enemy:  0");
+
+
 	AddObserver(ball);
+
 	AddEntity(BG);
 	AddEntity(enemy);
 	AddEntity(player);
 	AddEntity(ball);
+	AddEntity(enemyScoreUI);
+	AddEntity(playerScoreUI);
 
 	AudioManager::PlayMusic(AudioManager::ESounds::Lounge);
 }
@@ -38,7 +56,14 @@ void GameScene::Render(sf::RenderWindow & window)
 {
 	Scene::Render(window);
 }
+void WinCondition()
+{
 
+}
+void LossCondition()
+{
+
+}
 void GameScene::Update(double deltatime)
 {
 	if (player->GetSprite()->getGlobalBounds().intersects(ball->GetShape()->getGlobalBounds()))
@@ -49,6 +74,21 @@ void GameScene::Update(double deltatime)
 	{
 		Notify(std::shared_ptr<GameEvent>(new CollisionEvent(enemy, ball)));
 	}
+	if (ball->GetTransform()->getPosition().x + ball->GetShape()->getLocalBounds().width > Window::GetSize().x )
+	{
+		AudioManager::PlaySoundEffect(AudioManager::ESounds::BubblePop);
+		Notify(std::shared_ptr<GameEvent>(new ScoreEvent(player, 1)));
+		playerScoreUI->ScoreUpdate(1);
+		ball->Respawn();
+	}
+	else if (ball->GetTransform()->getPosition().x<0)
+	{
+		AudioManager::PlaySoundEffect(AudioManager::ESounds::BubblePop);
+		Notify(std::shared_ptr<GameEvent>(new ScoreEvent(enemy, 1)));
+		enemyScoreUI->ScoreUpdate(1);
+		ball->Respawn();
+	}
+	
 	Scene::Update(deltatime);
 }
 
