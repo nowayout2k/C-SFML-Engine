@@ -12,15 +12,15 @@ public:
 	virtual ~Subject();
 
 	/*Add a subscriber to Events related to this class*/
-	static void AddObserver(IObserver* const observer);
+	void AddObserver(IObserver* const observer);
 
 	/*Remove a subscriber to Events related to this class*/
-	static void RemoveObserver(IObserver* const observer);
+	void RemoveObserver(IObserver* const observer);
 
 	/*Notify all subscribers of an event*/
-	static void Notify(std::shared_ptr<GameEvent> gameEvent);
+	void Notify(std::shared_ptr<GameEvent> gameEvent);
 private:
-	static std::vector<IObserver*> observers;
+	std::vector<IObserver*> observers;
 	
 };
 

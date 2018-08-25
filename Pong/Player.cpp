@@ -7,7 +7,7 @@
 Player::Player(std::string textureName, sf::Sprite* sprite, sf::Vector2f pos, float rotation, sf::Vector2f scale)
 	: GameSprite(textureName, sprite, pos, rotation, scale)
 {
-	Input::AddObserver(this);
+	Input::GetInstance()->AddObserver(this);
 }
 
 

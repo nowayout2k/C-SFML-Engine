@@ -1,10 +1,11 @@
 #include "stdafx.h"
 #include "Input.h"
 
+Input* Input::_instance = nullptr;
 
 Input::Input()
 {
-	
+	_instance = this;
 }
 
 
@@ -39,7 +40,9 @@ void Input::HandleInput()
 		inputEvent->AddKey(sf::Keyboard::Left);
 	}
  
-	std::shared_ptr<GameEvent> gameEvent(inputEvent);
-
-	Notify(gameEvent);
+	if (inputEvent->KeyCount() > 0)
+	{
+		std::shared_ptr<GameEvent> gameEvent(inputEvent);
+		Notify(gameEvent);
+	}
 }

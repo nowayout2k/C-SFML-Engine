@@ -15,6 +15,7 @@ public:
 
 	/*check for pressed key*/
 	bool HasKey(sf::Keyboard::Key key) { if (std::find(keys.begin(), keys.end(), key) != keys.end()) return true; else return false; };
+	int KeyCount() { return keys.size(); }
 private:
 	std::vector<sf::Keyboard::Key> keys;
 };

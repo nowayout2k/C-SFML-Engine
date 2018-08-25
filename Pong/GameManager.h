@@ -20,5 +20,6 @@ public:
 private:
 	SceneManager sceneManager;
 	std::unique_ptr<Debug> debug;
+
 };
 

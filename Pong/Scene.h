@@ -15,7 +15,7 @@ public:
 
 	void AddEntity(Entity* const entity);
 	void RemoveEntity(int id);
-
+	Entity* GetEntity(int id);
 	//return name of scene
 	std::string GetName() { return name; }
 protected:

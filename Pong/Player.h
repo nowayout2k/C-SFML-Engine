@@ -1,8 +1,8 @@
-#pragma once
+ #pragma once
 #include "GameSprite.h"
 
 
-class Player :  public GameSprite, public IObserver
+class Player : public GameSprite, public IObserver
 {
 public:
 	Player(std::string textureName, sf::Sprite* sprite, sf::Vector2f pos, float rotation, sf::Vector2f scale);

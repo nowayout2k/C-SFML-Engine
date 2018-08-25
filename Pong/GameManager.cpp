@@ -5,14 +5,14 @@
 GameManager::GameManager()
 {
 	debug.reset(new Debug("arial.ttf",new sf::Text()));
-	Input::AddObserver(debug.get());
+	Input::GetInstance()->AddObserver(debug.get());
 	sceneManager.LoadScene(SceneManager::EScenes::GameScene);
 }
 
 
 GameManager::~GameManager()
 {
-	Input::RemoveObserver(debug.get());
+	Input::GetInstance()->RemoveObserver(debug.get());
 }
 
 void GameManager::UpdateObjects(double deltatime)

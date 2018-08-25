@@ -45,3 +45,15 @@ void Scene::RemoveEntity(int id)
 {
 	entities.erase(id);
 }
+
+Entity* Scene::GetEntity(int id)
+{
+	if (entities.find(id) != entities.end())
+	{
+		return entities[id].get();
+	}
+	else
+	{
+		return nullptr;
+	}
+}
