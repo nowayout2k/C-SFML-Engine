@@ -3,7 +3,7 @@
 #include "Debug.h"
 
 
-GameText::GameText(std::string fontName, sf::Text* text)
+GameText::GameText(std::string& fontName, sf::Text* text)
 	: Entity(text)
 {
  	this->text = text;

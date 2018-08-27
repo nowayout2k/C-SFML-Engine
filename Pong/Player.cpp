@@ -4,7 +4,7 @@
 #include "Window.h"
 #include "Input.h"
 
-Player::Player(std::string textureName, sf::Sprite* sprite)
+Player::Player(std::string& textureName, sf::Sprite* const sprite)
 	: GameSprite(textureName, sprite)
 {
 	Input::GetInstance()->AddObserver(this);
@@ -20,7 +20,7 @@ void Player::Render(sf::RenderWindow & window)
 	GameSprite::Render(window);
 }
 
-void Player::Update(double deltatime)
+void Player::Update(const double deltatime)
 {
 	GameSprite::Update(deltatime);
 }

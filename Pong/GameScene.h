@@ -20,7 +20,7 @@ public:
 
 	
 	virtual void Render(sf::RenderWindow & window);
-	virtual void Update(double deltatime);
+	virtual void Update(const double deltatime);
 protected:
 	GameSprite * enemy;
 	Player* player;

@@ -8,7 +8,7 @@
 class CollisionEvent : public GameEvent
 {
 public:
-	CollisionEvent(Entity* collider, Entity* collidee) : collider(collider), collidee(collidee) {};
+	CollisionEvent(Entity* const collider, Entity* const collidee) : collider(collider), collidee(collidee) {};
 	virtual ~CollisionEvent() {};
 	Entity* collider;
 	Entity* collidee;

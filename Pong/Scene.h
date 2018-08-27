@@ -17,7 +17,7 @@ public:
 	void RemoveEntity(int id);
 	Entity* GetEntity(int id);
 	//return name of scene
-	std::string GetName() { return name; }
+	std::string GetName() const { return name; }
 protected:
 	std::string name;
 	std::unordered_map<int, std::unique_ptr<Entity>> entities;

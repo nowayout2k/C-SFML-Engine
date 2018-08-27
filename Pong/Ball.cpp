@@ -2,9 +2,9 @@
 #include "Ball.h"
 #include "Window.h"
 #include "AudioManager.h"
+#include "RandomNumber.h"
 
-
-Ball::Ball(std::string textureName, sf::CircleShape* circleShape) : circleShape(circleShape),
+Ball::Ball(std::string& textureName, sf::CircleShape* circleShape) : circleShape(circleShape),
 	GameShape(textureName, circleShape)
 {
 
@@ -22,7 +22,7 @@ void Ball::Render(sf::RenderWindow & window)
 }
 
  
-void Ball::Update(double deltatime)
+void Ball::Update(const double deltatime)
 {
 
 	transform->move(direction);
@@ -60,5 +60,7 @@ void Ball::Collision(CollisionEvent* collisionEvent)
 void Ball::Respawn()
 {
 	transform->setPosition(sf::Vector2f(Window::GetSize().x / 2, Window::GetSize().y / 2));
-	direction = sf::Vector2f(rand() % 10 + 1, rand() % 10 + 1);
+	float randomX = RandomNumber::GetRandomNumber(1.0f, 10.0f);
+	float randomY = RandomNumber::GetRandomNumber(1.0f, 5.0f);
+	direction = sf::Vector2f(RandomNumber::IsNegative()? -randomX : randomX, RandomNumber::IsNegative() ? -randomY : randomY);
 }

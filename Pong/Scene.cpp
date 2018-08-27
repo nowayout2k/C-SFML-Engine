@@ -9,7 +9,7 @@ void Scene::Render(sf::RenderWindow & window)
 	}
 }
 
-void Scene::Update(double deltatime)
+void Scene::Update(const double deltatime)
 {
 	//Remove entities that died last frame
 	if (deadEntities.size() > 0)

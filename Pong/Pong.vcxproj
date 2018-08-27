@@ -168,7 +168,9 @@
     <ClInclude Include="InputEvent.h" />
     <ClInclude Include="IObserver.h" />
     <ClInclude Include="GameSprite.h" />
+    <ClInclude Include="World.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="RandomNumber.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="SceneManager.h" />
     <ClInclude Include="Entity.h" />
@@ -189,6 +191,7 @@
     <ClCompile Include="GameText.cpp" />
     <ClCompile Include="Input.cpp" />
     <ClCompile Include="GameSprite.cpp" />
+    <ClCompile Include="World.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Pong.cpp" />
     <ClCompile Include="Scene.cpp" />

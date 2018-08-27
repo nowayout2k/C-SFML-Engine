@@ -8,8 +8,8 @@
 class ScoreEvent : public GameEvent
 {
 public:
-	ScoreEvent(Entity* scorer, int score) : scorer(scorer), score(score) {};
+	ScoreEvent(const Entity* const scorer, int score) : scorer(scorer), score(score) {};
 	virtual ~ScoreEvent() {};
-	Entity* scorer;
+	const Entity* const scorer;
 	int score;
 };

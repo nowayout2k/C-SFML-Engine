@@ -3,7 +3,7 @@
 #include "Debug.h"
 
 
-GameShape::GameShape(std::string textureName, sf::Shape* shape)
+GameShape::GameShape(std::string& textureName, sf::Shape* shape)
 	: Entity(shape)
 {
 	this->texture.reset(new sf::Texture());
@@ -22,7 +22,7 @@ GameShape::~GameShape()
 
 }
 
-void GameShape::Update(double deltatime)
+void GameShape::Update(const double deltatime)
 {
 
 }

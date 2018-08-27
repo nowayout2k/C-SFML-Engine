@@ -3,7 +3,7 @@
 #include "Debug.h"
 
 
-GameSprite::GameSprite(std::string textureName, sf::Sprite* sprite)
+GameSprite::GameSprite(std::string& textureName, sf::Sprite* sprite)
 	: Entity(sprite)
 {
 	this->texture.reset(new sf::Texture());
@@ -22,7 +22,7 @@ GameSprite::~GameSprite()
 
 }
 
-void GameSprite::Update(double deltatime)
+void GameSprite::Update(const double deltatime)
 {
 
 }

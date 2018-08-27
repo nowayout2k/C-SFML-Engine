@@ -4,7 +4,7 @@
 #include "SFML/Graphics.hpp"
 #include <iostream>
 
-Debug::Debug(std::string fontname, sf::Text* text) : Entity(text)
+Debug::Debug(const std::string& fontname, sf::Text* const text) : Entity(text)
 {
 	this->text=text;
 	if (font.loadFromFile("Fonts/" + fontname))
@@ -20,12 +20,12 @@ Debug::~Debug()
 {
 }
 
-void Debug::Log(std::string message)
+void Debug::Log(const std::string& message)
 {
 	std::cout << message << std::endl;
 }
 
-void Debug::LogError(std::string message)
+void Debug::LogError(const std::string& message)
 {
 	throw std::exception(message.c_str());
 }
@@ -42,7 +42,7 @@ void Debug::OnNotify(std::shared_ptr<GameEvent> gameEvent)
 	}
 }
 
-void Debug::Update(double deltatime)
+void Debug::Update(const double deltatime)
 {
 	text->setString(std::to_string(1/(FPS.restart().asMicroseconds()*.000001)));
 }

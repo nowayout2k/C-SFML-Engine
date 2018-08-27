@@ -7,16 +7,16 @@
 class Debug : public IObserver, public Entity
 {
 public:
-	Debug(std::string fontname, sf::Text* text);
+	Debug(const std::string& fontname, sf::Text* const text);
 	~Debug();
 
 	/*output a message to the console
 	@param message - text to display*/
-	static void Log(std::string message);
+	static void Log(const std::string& message);
 
 	/*output a message to the console and raise exception
 	@param message - text to display*/
-	static void LogError(std::string message);
+	static void LogError(const std::string& message);
 
 
 	/* Inherited via IObserver
@@ -26,7 +26,7 @@ public:
  
  
 	/* Update Debug display*/
-	virtual void Update(double deltatime);
+	virtual void Update(const double deltatime);
 
 	/*draw Debug text
 	@param window - where to draw*/

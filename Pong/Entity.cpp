@@ -5,7 +5,7 @@
 
 int Entity::nextID = 0;
 
-Entity::Entity(sf::Transformable* entity)
+Entity::Entity(sf::Transformable* const entity)
 {
 	isAlive = true;
 	this->id = nextID++;

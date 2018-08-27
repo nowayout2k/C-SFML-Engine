@@ -5,7 +5,7 @@
 class Player : public GameSprite, public IObserver
 {
 public:
-	Player(std::string textureName, sf::Sprite* sprite);
+	Player(std::string& textureName, sf::Sprite* const sprite);
 	virtual ~Player();
 
 
@@ -13,7 +13,7 @@ public:
 	virtual void Render(sf::RenderWindow & window) override;
 
 	// Inherited via GameSprite
-	virtual void Update(double deltatime) override;
+	virtual void Update(const double deltatime) override;
 
 
 	// Inherited via IObserver

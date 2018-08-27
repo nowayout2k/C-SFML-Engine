@@ -7,17 +7,14 @@ class Entity
 {
 
 public:
-	/*@param filename - name of file to use for texture (ex: image.png)
-	@param position - positioning of the object
-	@param rotation - angle to rotate object
-	@parma scale - size factor based on inital size of object*/
-	Entity(sf::Transformable* gameObject);
+	/*@param filename - name of file to use for texture (ex: image.png)*/
+	Entity(sf::Transformable* const gameObject);
 
 	virtual ~Entity();
 
-	virtual void Render(sf::RenderWindow & window)=0;
-	virtual void Update(double deltatime)=0;
-	sf::Transformable* const GetTransform() { return transform.get(); }
+	virtual void Render(sf::RenderWindow& window)=0;
+	virtual void Update(const double deltatime)=0;
+	sf::Transformable* const GetTransform() const { return transform.get(); }
 	void Kill();
 	bool IsAlive() const { return isAlive; };
 	int GetId() const { return id; }

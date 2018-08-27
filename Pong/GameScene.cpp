@@ -8,19 +8,22 @@
 
 GameScene::GameScene()
 {
-	enemy = new GameSprite("Paddle.png", new sf::Sprite());
+	std::string desertBGTextureName = "DesertBG.jpg";
+	std::string paddleTextureName = "Paddle.png";
+
+	enemy = new GameSprite(paddleTextureName, new sf::Sprite());
 	enemy->GetTransform()->setPosition(sf::Vector2f(Window::GetSize().x - 20, 200));
 	enemy->GetSprite()->setColor(sf::Color(255, 0, 0));
 	enemy->GetTransform()->move(sf::Vector2f(-enemy->GetSprite()->getLocalBounds().width,0));
 
-	player = new Player("Paddle.png", new sf::Sprite());
+	player = new Player(paddleTextureName, new sf::Sprite());
 	player->GetTransform()->setPosition(sf::Vector2f(20, 200));
 	player->GetSprite()->setColor(sf::Color(0,0,255));
 
-	BG = new GameSprite("DesertBG.jpg", new sf::Sprite());
+	BG = new GameSprite(desertBGTextureName, new sf::Sprite());
 	BG->GetSprite()->setScale(Window::GetSize().x/BG->GetSprite()->getLocalBounds().width, Window::GetSize().y / BG->GetSprite()->getLocalBounds().height);
 
-	ball = new Ball("DesertBG.jpg", new sf::CircleShape(15));
+	ball = new Ball(desertBGTextureName, new sf::CircleShape(15));
 	ball->Respawn();
 
 	
@@ -64,7 +67,7 @@ void LossCondition()
 {
 
 }
-void GameScene::Update(double deltatime)
+void GameScene::Update(const double deltatime)
 {
 	if (player->GetSprite()->getGlobalBounds().intersects(ball->GetShape()->getGlobalBounds()))
 	{
