@@ -67,11 +67,20 @@
     <Filter Include="Source Files\System">
       <UniqueIdentifier>{00193db8-a8e9-43a6-80c5-252727103797}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Demo Game">
+      <UniqueIdentifier>{f9a29348-7826-4e8e-a94d-7447bb3385ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DemoGame">
+      <UniqueIdentifier>{99eaa20d-7151-453e-b9de-98d12edcc376}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Demo Game\Headers">
+      <UniqueIdentifier>{93c600bc-18f0-4f83-8f14-b8c52bb15f6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Demo Game\Source">
+      <UniqueIdentifier>{db539ff1-c0dc-4fcc-a780-3c10824855cd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Source Code\main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Source Code\System\Window.cpp">
       <Filter>Source Files\System</Filter>
     </ClCompile>
@@ -116,6 +125,24 @@
     </ClCompile>
     <ClCompile Include="Source Code\Audio\AudioManager.cpp">
       <Filter>Source Files\Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="Source Code\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Demo Game\Ball.cpp">
+      <Filter>Demo Game\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Demo Game\GameScene.cpp">
+      <Filter>Demo Game\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Demo Game\Player.cpp">
+      <Filter>Demo Game\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Demo Game\Pong.cpp">
+      <Filter>Demo Game\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Demo Game\ScoreUI.cpp">
+      <Filter>Demo Game\Source</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -181,6 +208,24 @@
     </ClInclude>
     <ClInclude Include="Source Code\Audio\AudioManager.h">
       <Filter>Header Files\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="Demo Game\GameScene.h">
+      <Filter>Demo Game\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Demo Game\Player.h">
+      <Filter>Demo Game\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Demo Game\Pong.h">
+      <Filter>Demo Game\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Demo Game\ScoreEvent.h">
+      <Filter>Demo Game\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Demo Game\ScoreUI.h">
+      <Filter>Demo Game\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Demo Game\Ball.h">
+      <Filter>Demo Game\Headers</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

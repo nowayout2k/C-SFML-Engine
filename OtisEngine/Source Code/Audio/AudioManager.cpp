@@ -19,7 +19,7 @@ namespace OE
 
 	void AudioManager::PlaySoundEffect(ESounds sound)
 	{
-		if (buffers[0].loadFromFile("Audio/" + GetSoundFilename(sound)))
+		if (buffers[0].loadFromFile("Sounds/" + GetSoundFilename(sound)))
 		{
 			sounds[0].setBuffer(buffers[0]);
 			sounds[0].play();
@@ -30,7 +30,7 @@ namespace OE
 
 	void AudioManager::PlayMusic(ESounds sound)
 	{
-		if (buffers[1].loadFromFile("Audio/" + GetSoundFilename(sound)))
+		if (buffers[1].loadFromFile("Sounds/" + GetSoundFilename(sound)))
 		{
 			sounds[1].setBuffer(buffers[1]);
 			sounds[1].setLoop(true);

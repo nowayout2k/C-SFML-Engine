@@ -18,6 +18,7 @@ namespace OE
 		void AddEntity(Entity* const entity);
 		void RemoveEntity(int id);
 		Entity* GetEntity(int id);
+
 		//return name of scene
 		std::string GetName() const { return name; }
 	protected:
