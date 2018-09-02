@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -17,6 +17,47 @@
       <Configuration>Release</Configuration>
       <Platform>x64</Platform>
     </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source Code\Audio\AudioManager.cpp" />
+    <ClCompile Include="Source Code\Debug\Debug.cpp" />
+    <ClCompile Include="Source Code\Entity\Entity.cpp" />
+    <ClCompile Include="Source Code\Entity\GameShape.cpp" />
+    <ClCompile Include="Source Code\Entity\GameSprite.cpp" />
+    <ClCompile Include="Source Code\Entity\GameText.cpp" />
+    <ClCompile Include="Source Code\Event\Subject.cpp" />
+    <ClCompile Include="Source Code\Input\Input.cpp" />
+    <ClCompile Include="Source Code\main.cpp" />
+    <ClCompile Include="Source Code\Physics\World.cpp" />
+    <ClCompile Include="Source Code\Scene\Scene.cpp" />
+    <ClCompile Include="Source Code\Scene\SceneManager.cpp" />
+    <ClCompile Include="Source Code\System\GameManager.cpp" />
+    <ClCompile Include="Source Code\System\OtisEngine.cpp" />
+    <ClCompile Include="Source Code\System\stdafx.cpp" />
+    <ClCompile Include="Source Code\System\Window.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Source Code\Audio\AudioManager.h" />
+    <ClInclude Include="Source Code\Component\CollisionEvent.h" />
+    <ClInclude Include="Source Code\Component\InputEvent.h" />
+    <ClInclude Include="Source Code\Debug\Debug.h" />
+    <ClInclude Include="Source Code\Entity\Entity.h" />
+    <ClInclude Include="Source Code\Entity\GameShape.h" />
+    <ClInclude Include="Source Code\Entity\GameSprite.h" />
+    <ClInclude Include="Source Code\Entity\GameText.h" />
+    <ClInclude Include="Source Code\Event\GameEvent.h" />
+    <ClInclude Include="Source Code\Event\IObserver.h" />
+    <ClInclude Include="Source Code\Event\Subject.h" />
+    <ClInclude Include="Source Code\Input\Input.h" />
+    <ClInclude Include="Source Code\Physics\World.h" />
+    <ClInclude Include="Source Code\Scene\Scene.h" />
+    <ClInclude Include="Source Code\Scene\SceneManager.h" />
+    <ClInclude Include="Source Code\System\GameManager.h" />
+    <ClInclude Include="Source Code\System\OtisEngine.h" />
+    <ClInclude Include="Source Code\System\RandomNumber.h" />
+    <ClInclude Include="Source Code\System\stdafx.h" />
+    <ClInclude Include="Source Code\System\targetver.h" />
+    <ClInclude Include="Source Code\System\Window.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
@@ -91,7 +132,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>D:\Local Projects\SDKs\SFML-2.5.0 32 bit\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Local Projects\repos\OtisEngine\OtisEngine\Source Code\System;D:\Local Projects\repos\OtisEngine\OtisEngine\Source Code\Scene;D:\Local Projects\repos\OtisEngine\OtisEngine\Source Code\Physics;D:\Local Projects\repos\OtisEngine\OtisEngine\Source Code\Input;D:\Local Projects\repos\OtisEngine\OtisEngine\Source Code\Entity;D:\Local Projects\repos\OtisEngine\OtisEngine\Source Code\Debug;D:\Local Projects\repos\OtisEngine\OtisEngine\Source Code\Component;D:\Local Projects\repos\OtisEngine\OtisEngine\Source Code\Audio;D:\Local Projects\SDKs\SFML-2.5.0 32 bit\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PrecompiledHeaderFile />
     </ClCompile>
     <Link>
@@ -157,59 +198,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="AudioManager.cpp" />
-    <ClCompile Include="Ball.cpp" />
-    <ClCompile Include="Debug.cpp" />
-    <ClCompile Include="Entity.cpp" />
-    <ClCompile Include="GameManager.cpp" />
-    <ClCompile Include="GameScene.cpp" />
-    <ClCompile Include="GameShape.cpp" />
-    <ClCompile Include="GameSprite.cpp" />
-    <ClCompile Include="GameText.cpp" />
-    <ClCompile Include="Input.cpp" />
-    <ClCompile Include="OtisEngine.cpp" />
-    <ClCompile Include="Player.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="Pong.cpp" />
-    <ClCompile Include="Scene.cpp" />
-    <ClCompile Include="SceneManager.cpp" />
-    <ClCompile Include="ScoreUI.cpp" />
-    <ClCompile Include="stdafx.cpp" />
-    <ClCompile Include="Subject.cpp" />
-    <ClCompile Include="Window.cpp" />
-    <ClCompile Include="World.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="AudioManager.h" />
-    <ClInclude Include="Ball.h" />
-    <ClInclude Include="CollisionEvent.h" />
-    <ClInclude Include="Debug.h" />
-    <ClInclude Include="Entity.h" />
-    <ClInclude Include="GameEvent.h" />
-    <ClInclude Include="GameManager.h" />
-    <ClInclude Include="GameScene.h" />
-    <ClInclude Include="GameShape.h" />
-    <ClInclude Include="GameSprite.h" />
-    <ClInclude Include="GameText.h" />
-    <ClInclude Include="Globals.h" />
-    <ClInclude Include="Input.h" />
-    <ClInclude Include="InputEvent.h" />
-    <ClInclude Include="IObserver.h" />
-    <ClInclude Include="OtisEngine.h" />
-    <ClInclude Include="Player.h" />
-    <ClInclude Include="Pong.h" />
-    <ClInclude Include="RandomNumber.h" />
-    <ClInclude Include="Scene.h" />
-    <ClInclude Include="SceneManager.h" />
-    <ClInclude Include="ScoreEvent.h" />
-    <ClInclude Include="ScoreUI.h" />
-    <ClInclude Include="stdafx.h" />
-    <ClInclude Include="Subject.h" />
-    <ClInclude Include="targetver.h" />
-    <ClInclude Include="Window.h" />
-    <ClInclude Include="World.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
