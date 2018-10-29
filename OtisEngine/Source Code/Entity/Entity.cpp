@@ -6,12 +6,12 @@
 
 namespace OE
 {
-	int Entity::nextID = 0;
+	int Entity::_nextID = 0;
 
 	Entity::Entity(sf::Transformable* const entity)
 	{
 		isAlive = true;
-		this->id = nextID++;
+		this->id = _nextID++;
 		this->transform.reset(entity);
 		this->transform->setPosition(sf::Vector2f(0, 0));
 		this->transform->setRotation(0.0f);

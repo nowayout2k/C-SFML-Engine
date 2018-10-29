@@ -1,22 +1,22 @@
 
-#include "Input.h"
+#include "InputManager.h"
 
 
 namespace OE
 {
-	Input* Input::_instance = nullptr;
+	InputManager* InputManager::_instance = nullptr;
 
-	Input::Input()
+	InputManager::InputManager()
 	{
 		_instance = this;
 	}
 
 
-	Input::~Input()
+	InputManager::~InputManager()
 	{
 	}
 
-	void Input::HandleInput()
+	void InputManager::HandleInput()
 	{
 		InputEvent* inputEvent = new InputEvent();
 

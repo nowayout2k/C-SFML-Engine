@@ -1,10 +1,10 @@
 
-#include "GameText.h"
+#include "TextEntity.h"
 #include "Debug.h"
 
 namespace OE
 {
-	GameText::GameText(std::string& fontName, sf::Text* text)
+	TextEntity::TextEntity(std::string& fontName, sf::Text* text)
 		: Entity(text)
 	{
 		this->text = text;
@@ -17,19 +17,19 @@ namespace OE
 	}
 
 
-	GameText::~GameText()
+	TextEntity::~TextEntity()
 	{
 
 	}
 
-	void GameText::Update(double deltatime)
+	void TextEntity::Update(double deltatime)
 	{
 
 	}
 
 
 
-	void GameText::Render(sf::RenderWindow & window)
+	void TextEntity::Render(sf::RenderWindow & window)
 	{
 		window.draw(*text);
 	}

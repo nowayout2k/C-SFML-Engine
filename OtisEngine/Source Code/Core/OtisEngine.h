@@ -21,9 +21,9 @@ namespace OE
 		sf::Clock deltatime;
 
 		//input handler
-		Input input;
+		InputManager input;
 
 		//create game driver
-		GameManager* gameManager;
+		std::unique_ptr<GameManager> gameManager;
 	};
 }

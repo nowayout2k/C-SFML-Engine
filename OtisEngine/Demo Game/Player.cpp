@@ -2,12 +2,12 @@
 #include "Player.h"
 #include "InputEvent.h"
 #include "Window.h"
-#include "Input.h"
+#include "InputManager.h"
 
 Player::Player(std::string& textureName, sf::Sprite* const sprite)
-	: GameSprite(textureName, sprite)
+	: SpriteEntity(textureName, sprite)
 {
-	OE::Input::GetInstance()->AddObserver(this);
+	OE::InputManager::GetInstance()->AddObserver(this);
 }
 
 
@@ -17,12 +17,12 @@ Player::~Player()
 
 void Player::Render(sf::RenderWindow & window)
 {
-	GameSprite::Render(window);
+	SpriteEntity::Render(window);
 }
 
 void Player::Update(const double deltatime)
 {
-	GameSprite::Update(deltatime);
+	SpriteEntity::Update(deltatime);
 }
 
 

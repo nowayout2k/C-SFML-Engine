@@ -1,15 +1,16 @@
 #pragma once
 #include "Scene.h"
-#include "GameSprite.h"
+#include "SpriteEntity.h"
 #include "Subject.h"
 #include "SFML/Graphics.hpp"
 #include "Ball.h"
-#include "GameSprite.h"
-#include "GameShape.h"
+#include "SpriteEntity.h"
+#include "ShapeEntity.h"
 #include "Player.h"
 #include "Ball.h"
-#include "GameText.h"
+#include "TextEntity.h"
 #include "ScoreUI.h"
+#include "Enemy.h"
 
 //Scene for gameplay
 class GameScene : public OE::Scene, public OE::Subject
@@ -22,12 +23,12 @@ public:
 	virtual void Render(sf::RenderWindow & window);
 	virtual void Update(const double deltatime);
 protected:
-	OE::GameSprite * enemy;
+	Enemy* enemy;
 	Player* player;
 	Ball* ball;
 	ScoreUI* enemyScoreUI;
 	ScoreUI* playerScoreUI;
-	OE::GameSprite* BG;
+	OE::SpriteEntity* BG;
 
 };
 

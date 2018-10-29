@@ -1,18 +1,18 @@
  #pragma once
-#include "GameSprite.h"
+#include "SpriteEntity.h"
 
 
-class Player : public OE::GameSprite, public OE::IObserver
+class Player : public OE::SpriteEntity, public OE::IObserver
 {
 public:
 	Player(std::string& textureName, sf::Sprite* const sprite);
 	virtual ~Player();
 
 
-	// Inherited via GameSprite
+	// Inherited via SpriteEntity
 	virtual void Render(sf::RenderWindow & window) override;
 
-	// Inherited via GameSprite
+	// Inherited via SpriteEntity
 	virtual void Update(const double deltatime) override;
 
 

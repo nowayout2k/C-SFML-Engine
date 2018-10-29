@@ -3,14 +3,14 @@
 
 namespace OE
 {
-	class GameText : public Entity
+	class TextEntity : public Entity
 	{
 
 	public:
 		/*
 		@param filename - name of file to use for Font (ex: arial.png) [Passed to base class]*/
-		GameText(std::string& fontName, sf::Text* const text);
-		virtual ~GameText();
+		TextEntity(std::string& fontName, sf::Text* const text);
+		virtual ~TextEntity();
 
 		// Inherited via Entity
 		virtual void Render(sf::RenderWindow & window) override;
@@ -18,6 +18,7 @@ namespace OE
 		// Inherited via Entity
 		virtual void Update(double deltatime) override;
 
+		/*Return the entity's Text object*/
 		virtual sf::Text* const GetText() const { return text; }
 
 	protected:

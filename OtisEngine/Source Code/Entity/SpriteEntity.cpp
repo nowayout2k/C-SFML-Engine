@@ -1,10 +1,10 @@
 
-#include "GameSprite.h"
+#include "SpriteEntity.h"
 #include "Debug.h"
 
 namespace OE
 {
-	GameSprite::GameSprite(std::string& textureName, sf::Sprite* sprite)
+	SpriteEntity::SpriteEntity(std::string& textureName, sf::Sprite* sprite)
 		: Entity(sprite)
 	{
 		this->texture.reset(new sf::Texture());
@@ -18,19 +18,19 @@ namespace OE
 	}
 
 
-	GameSprite::~GameSprite()
+	SpriteEntity::~SpriteEntity()
 	{
 
 	}
 
-	void GameSprite::Update(const double deltatime)
+	void SpriteEntity::Update(const double deltatime)
 	{
 
 	}
 
 
 
-	void GameSprite::Render(sf::RenderWindow & window)
+	void SpriteEntity::Render(sf::RenderWindow & window)
 	{
 		window.draw(*sprite);
 	}

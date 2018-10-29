@@ -4,7 +4,7 @@
 
 
 ScoreUI::ScoreUI(std::string preText, std::string fontName, sf::Text* text)
-	: preText(preText), currentScore(0), GameText(fontName, text)
+	: preText(preText), currentScore(0), TextEntity(fontName, text)
 {
 	text->setString(preText + std::to_string(currentScore));
 }

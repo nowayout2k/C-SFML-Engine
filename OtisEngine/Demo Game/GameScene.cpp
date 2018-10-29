@@ -11,7 +11,7 @@ GameScene::GameScene()
 	std::string desertBGTextureName = "DesertBG.jpg";
 	std::string paddleTextureName = "Paddle.png";
 
-	enemy = new OE::GameSprite(paddleTextureName, new sf::Sprite());
+	enemy = new Enemy(paddleTextureName, new sf::Sprite());
 	enemy->GetTransform()->setPosition(sf::Vector2f(OE::Window::GetSize().x - 20, 200));
 	enemy->GetSprite()->setColor(sf::Color(255, 0, 0));
 	enemy->GetTransform()->move(sf::Vector2f(-enemy->GetSprite()->getLocalBounds().width,0));
@@ -20,7 +20,7 @@ GameScene::GameScene()
 	player->GetTransform()->setPosition(sf::Vector2f(20, 200));
 	player->GetSprite()->setColor(sf::Color(0,0,255));
 
-	BG = new OE::GameSprite(desertBGTextureName, new sf::Sprite());
+	BG = new OE::SpriteEntity(desertBGTextureName, new sf::Sprite());
 	BG->GetSprite()->setScale(OE::Window::GetSize().x/BG->GetSprite()->getLocalBounds().width, OE::Window::GetSize().y / BG->GetSprite()->getLocalBounds().height);
 
 	ball = new Ball(desertBGTextureName, new sf::CircleShape(15));
@@ -69,6 +69,15 @@ void LossCondition()
 }
 void GameScene::Update(const double deltatime)
 {
+	if (enemy->GetTransform()->getPosition().y + enemy->GetSprite()->getLocalBounds().height< ball->GetTransform()->getPosition().y)
+	{
+			enemy->GetTransform()->move(sf::Vector2f(0, 3));
+	}
+	else if (enemy->GetTransform()->getPosition().y > ball->GetTransform()->getPosition().y)
+	{
+			enemy->GetTransform()->move(sf::Vector2f(0, -3));
+	}
+
 	if (player->GetSprite()->getGlobalBounds().intersects(ball->GetShape()->getGlobalBounds()))
 	{
 		Notify(std::shared_ptr<OE::GameEvent>(new OE::CollisionEvent(player, ball)));

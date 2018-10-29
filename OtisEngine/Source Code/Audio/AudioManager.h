@@ -16,7 +16,6 @@ namespace OE
 			Lounge
 		};
 
-
 		AudioManager();
 		virtual ~AudioManager();
 
@@ -25,12 +24,10 @@ namespace OE
 
 		//Start playing a looped sound
 		static void PlayMusic(ESounds sound);
-
-	private:
-		static sf::Sound sounds[];
-		static sf::SoundBuffer buffers[];
 		static std::string GetSoundFilename(ESounds sound);
-
+	private:
+		static sf::Sound _sounds[];
+		static sf::SoundBuffer _buffers[];
 	};
 
 }

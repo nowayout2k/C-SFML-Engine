@@ -1,10 +1,10 @@
 
-#include "GameShape.h"
+#include "ShapeEntity.h"
 #include "Debug.h"
 
 namespace OE
 {
-	GameShape::GameShape(std::string& textureName, sf::Shape* shape)
+	ShapeEntity::ShapeEntity(std::string& textureName, sf::Shape* shape)
 		: Entity(shape)
 	{
 		this->texture.reset(new sf::Texture());
@@ -18,19 +18,19 @@ namespace OE
 	}
 
 
-	GameShape::~GameShape()
+	ShapeEntity::~ShapeEntity()
 	{
 
 	}
 
-	void GameShape::Update(const double deltatime)
+	void ShapeEntity::Update(const double deltatime)
 	{
 
 	}
 
 
 
-	void GameShape::Render(sf::RenderWindow & window)
+	void ShapeEntity::Render(sf::RenderWindow & window)
 	{
 		window.draw(*shape);
 	}

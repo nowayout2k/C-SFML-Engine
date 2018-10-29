@@ -34,17 +34,11 @@
     <Filter Include="Header Files\Debug">
       <UniqueIdentifier>{d437d97f-baee-4703-b087-ea839a455d7a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Component">
-      <UniqueIdentifier>{79545c57-7563-460a-8d3a-3f76fdf87a38}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\Audio">
       <UniqueIdentifier>{853d503e-bd14-4043-a731-39260b6b2137}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\Audio">
       <UniqueIdentifier>{27bbeaa9-7428-402b-8cd4-a6a6dfc5367c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Component">
-      <UniqueIdentifier>{d67fca44-b904-4ef0-88cd-f805db4737b0}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\Debug">
       <UniqueIdentifier>{6bc54add-7972-4a37-b7bf-227035c456b4}</UniqueIdentifier>
@@ -70,9 +64,6 @@
     <Filter Include="Demo Game">
       <UniqueIdentifier>{f9a29348-7826-4e8e-a94d-7447bb3385ca}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\DemoGame">
-      <UniqueIdentifier>{99eaa20d-7151-453e-b9de-98d12edcc376}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Demo Game\Headers">
       <UniqueIdentifier>{93c600bc-18f0-4f83-8f14-b8c52bb15f6f}</UniqueIdentifier>
     </Filter>
@@ -81,18 +72,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Source Code\System\Window.cpp">
-      <Filter>Source Files\System</Filter>
-    </ClCompile>
-    <ClCompile Include="Source Code\System\GameManager.cpp">
-      <Filter>Source Files\System</Filter>
-    </ClCompile>
-    <ClCompile Include="Source Code\System\OtisEngine.cpp">
-      <Filter>Source Files\System</Filter>
-    </ClCompile>
-    <ClCompile Include="Source Code\System\stdafx.cpp">
-      <Filter>Source Files\System</Filter>
-    </ClCompile>
     <ClCompile Include="Source Code\Scene\Scene.cpp">
       <Filter>Source Files\Scene</Filter>
     </ClCompile>
@@ -102,22 +81,10 @@
     <ClCompile Include="Source Code\Physics\World.cpp">
       <Filter>Source Files\Physics</Filter>
     </ClCompile>
-    <ClCompile Include="Source Code\Input\Input.cpp">
-      <Filter>Source Files\Input</Filter>
-    </ClCompile>
     <ClCompile Include="Source Code\Event\Subject.cpp">
       <Filter>Source Files\Event</Filter>
     </ClCompile>
     <ClCompile Include="Source Code\Entity\Entity.cpp">
-      <Filter>Source Files\Entity</Filter>
-    </ClCompile>
-    <ClCompile Include="Source Code\Entity\GameShape.cpp">
-      <Filter>Source Files\Entity</Filter>
-    </ClCompile>
-    <ClCompile Include="Source Code\Entity\GameSprite.cpp">
-      <Filter>Source Files\Entity</Filter>
-    </ClCompile>
-    <ClCompile Include="Source Code\Entity\GameText.cpp">
       <Filter>Source Files\Entity</Filter>
     </ClCompile>
     <ClCompile Include="Source Code\Debug\Debug.cpp">
@@ -144,26 +111,35 @@
     <ClCompile Include="Demo Game\ScoreUI.cpp">
       <Filter>Demo Game\Source</Filter>
     </ClCompile>
+    <ClCompile Include="Source Code\Input\InputManager.cpp">
+      <Filter>Source Files\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Source Code\Entity\TextEntity.cpp">
+      <Filter>Source Files\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="Source Code\Entity\SpriteEntity.cpp">
+      <Filter>Source Files\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="Source Code\Entity\ShapeEntity.cpp">
+      <Filter>Source Files\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="Source Code\Core\OtisEngine.cpp">
+      <Filter>Source Files\System</Filter>
+    </ClCompile>
+    <ClCompile Include="Source Code\Core\stdafx.cpp">
+      <Filter>Source Files\System</Filter>
+    </ClCompile>
+    <ClCompile Include="Source Code\Core\Window.cpp">
+      <Filter>Source Files\System</Filter>
+    </ClCompile>
+    <ClCompile Include="Source Code\Core\GameManager.cpp">
+      <Filter>Source Files\System</Filter>
+    </ClCompile>
+    <ClCompile Include="Enemy.cpp">
+      <Filter>Demo Game\Source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Source Code\System\OtisEngine.h">
-      <Filter>Header Files\System</Filter>
-    </ClInclude>
-    <ClInclude Include="Source Code\System\RandomNumber.h">
-      <Filter>Header Files\System</Filter>
-    </ClInclude>
-    <ClInclude Include="Source Code\System\stdafx.h">
-      <Filter>Header Files\System</Filter>
-    </ClInclude>
-    <ClInclude Include="Source Code\System\targetver.h">
-      <Filter>Header Files\System</Filter>
-    </ClInclude>
-    <ClInclude Include="Source Code\System\Window.h">
-      <Filter>Header Files\System</Filter>
-    </ClInclude>
-    <ClInclude Include="Source Code\System\GameManager.h">
-      <Filter>Header Files\System</Filter>
-    </ClInclude>
     <ClInclude Include="Source Code\Scene\Scene.h">
       <Filter>Header Files\Scene</Filter>
     </ClInclude>
@@ -172,9 +148,6 @@
     </ClInclude>
     <ClInclude Include="Source Code\Physics\World.h">
       <Filter>Header Files\Physics</Filter>
-    </ClInclude>
-    <ClInclude Include="Source Code\Input\Input.h">
-      <Filter>Header Files\Input</Filter>
     </ClInclude>
     <ClInclude Include="Source Code\Event\IObserver.h">
       <Filter>Header Files\Event</Filter>
@@ -185,26 +158,11 @@
     <ClInclude Include="Source Code\Event\GameEvent.h">
       <Filter>Header Files\Event</Filter>
     </ClInclude>
-    <ClInclude Include="Source Code\Entity\GameSprite.h">
-      <Filter>Header Files\Entity</Filter>
-    </ClInclude>
-    <ClInclude Include="Source Code\Entity\GameText.h">
-      <Filter>Header Files\Entity</Filter>
-    </ClInclude>
     <ClInclude Include="Source Code\Entity\Entity.h">
-      <Filter>Header Files\Entity</Filter>
-    </ClInclude>
-    <ClInclude Include="Source Code\Entity\GameShape.h">
       <Filter>Header Files\Entity</Filter>
     </ClInclude>
     <ClInclude Include="Source Code\Debug\Debug.h">
       <Filter>Header Files\Debug</Filter>
-    </ClInclude>
-    <ClInclude Include="Source Code\Component\CollisionEvent.h">
-      <Filter>Header Files\Component</Filter>
-    </ClInclude>
-    <ClInclude Include="Source Code\Component\InputEvent.h">
-      <Filter>Header Files\Component</Filter>
     </ClInclude>
     <ClInclude Include="Source Code\Audio\AudioManager.h">
       <Filter>Header Files\Audio</Filter>
@@ -225,6 +183,45 @@
       <Filter>Demo Game\Headers</Filter>
     </ClInclude>
     <ClInclude Include="Demo Game\Ball.h">
+      <Filter>Demo Game\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Source Code\Input\InputManager.h">
+      <Filter>Header Files\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Source Code\Entity\ShapeEntity.h">
+      <Filter>Header Files\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="Source Code\Entity\SpriteEntity.h">
+      <Filter>Header Files\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="Source Code\Entity\TextEntity.h">
+      <Filter>Header Files\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="Source Code\Core\stdafx.h">
+      <Filter>Header Files\System</Filter>
+    </ClInclude>
+    <ClInclude Include="Source Code\Core\targetver.h">
+      <Filter>Header Files\System</Filter>
+    </ClInclude>
+    <ClInclude Include="Source Code\Core\Window.h">
+      <Filter>Header Files\System</Filter>
+    </ClInclude>
+    <ClInclude Include="Source Code\Core\RandomNumber.h">
+      <Filter>Header Files\System</Filter>
+    </ClInclude>
+    <ClInclude Include="Source Code\Core\OtisEngine.h">
+      <Filter>Header Files\System</Filter>
+    </ClInclude>
+    <ClInclude Include="Source Code\Core\GameManager.h">
+      <Filter>Header Files\System</Filter>
+    </ClInclude>
+    <ClInclude Include="Source Code\Event\InputEvent.h">
+      <Filter>Header Files\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="Source Code\Event\CollisionEvent.h">
+      <Filter>Header Files\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy.h">
       <Filter>Demo Game\Headers</Filter>
     </ClInclude>
   </ItemGroup>

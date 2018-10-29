@@ -4,6 +4,7 @@ namespace OE
 {
 	void Scene::Render(sf::RenderWindow & window)
 	{
+		/*Draw each object in the scene*/
 		for (auto itr = entities.begin(); itr != entities.end(); ++itr)
 		{
 			itr->second->Render(window);
@@ -22,7 +23,7 @@ namespace OE
 			deadEntities.clear();
 		}
 
-
+		/*Update objects in the scene*/
 		for (auto itr = entities.begin(); itr != entities.end(); ++itr)
 		{
 			if (itr->second->IsAlive())

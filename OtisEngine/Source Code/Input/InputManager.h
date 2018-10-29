@@ -4,19 +4,19 @@
 namespace OE
 {
 	/*Handles User input*/
-	class Input : public Subject
+	class InputManager : public Subject
 	{
 	public:
-		Input();
-		~Input();
+		InputManager();
+		~InputManager();
 
-		static Input* GetInstance() { return _instance; }
+		static InputManager* GetInstance() { return _instance; }
 
 		/*stores keys being pressed and then brodcasts them*/
 		void HandleInput();
 
 	private:
-		static Input* _instance;
+		static InputManager* _instance;
 	};
 
 }

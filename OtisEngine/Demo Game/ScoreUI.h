@@ -1,9 +1,9 @@
 #pragma once
-#include "GameText.h"
+#include "TextEntity.h"
 #include "IObserver.h"
 #include "ScoreEvent.h"
 
-class ScoreUI : public OE::GameText
+class ScoreUI : public OE::TextEntity
 {
 public:
 	ScoreUI(std::string preText, std::string fontName, sf::Text* text);

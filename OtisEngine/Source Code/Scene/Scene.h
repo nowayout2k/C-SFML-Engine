@@ -12,12 +12,20 @@ namespace OE
 		Scene() {};
 		virtual ~Scene() {};
 
+		/*Draw Objects in scene*/
 		virtual void Render(sf::RenderWindow & window);
-		virtual void Update(double deltatime);
 
+		/*Update objects in scene*/
+		virtual void Update(const double deltatime);
+
+		/*Add an object to the scene*/
 		void AddEntity(Entity* const entity);
-		void RemoveEntity(int id);
-		Entity* GetEntity(int id);
+
+		/*Remove an object from the scene*/
+		void RemoveEntity(const int id);
+
+		/*Return an object matching the id param*/
+		Entity* GetEntity(const int id);
 
 		//return name of scene
 		std::string GetName() const { return name; }

@@ -5,7 +5,7 @@
 #include "RandomNumber.h"
 
 Ball::Ball(std::string& textureName, sf::CircleShape* circleShape) : circleShape(circleShape),
-	GameShape(textureName, circleShape)
+	ShapeEntity(textureName, circleShape)
 {
 
 	direction = sf::Vector2<float>(2.0f, 2.0f);
@@ -18,7 +18,7 @@ Ball::~Ball()
 
 void Ball::Render(sf::RenderWindow & window)
 {
-	GameShape::Render(window);
+	ShapeEntity::Render(window);
 }
 
  
@@ -33,7 +33,7 @@ void Ball::Update(const double deltatime)
 	}
 
 	
-	GameShape::Update(deltatime);
+	ShapeEntity::Update(deltatime);
 }
 
 void Ball::OnNotify(std::shared_ptr<OE::GameEvent> gameEvent)

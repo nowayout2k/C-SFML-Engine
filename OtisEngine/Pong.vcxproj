@@ -24,22 +24,23 @@
     <ClCompile Include="Demo Game\Player.cpp" />
     <ClCompile Include="Demo Game\Pong.cpp" />
     <ClCompile Include="Demo Game\ScoreUI.cpp" />
+    <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="Source Code\Audio\AudioManager.cpp" />
+    <ClCompile Include="Source Code\Core\GameManager.cpp" />
+    <ClCompile Include="Source Code\Core\OtisEngine.cpp" />
+    <ClCompile Include="Source Code\Core\stdafx.cpp" />
+    <ClCompile Include="Source Code\Core\Window.cpp" />
     <ClCompile Include="Source Code\Debug\Debug.cpp" />
     <ClCompile Include="Source Code\Entity\Entity.cpp" />
-    <ClCompile Include="Source Code\Entity\GameShape.cpp" />
-    <ClCompile Include="Source Code\Entity\GameSprite.cpp" />
-    <ClCompile Include="Source Code\Entity\GameText.cpp" />
+    <ClCompile Include="Source Code\Entity\ShapeEntity.cpp" />
+    <ClCompile Include="Source Code\Entity\SpriteEntity.cpp" />
+    <ClCompile Include="Source Code\Entity\TextEntity.cpp" />
     <ClCompile Include="Source Code\Event\Subject.cpp" />
-    <ClCompile Include="Source Code\Input\Input.cpp" />
+    <ClCompile Include="Source Code\Input\InputManager.cpp" />
     <ClCompile Include="Source Code\main.cpp" />
     <ClCompile Include="Source Code\Physics\World.cpp" />
     <ClCompile Include="Source Code\Scene\Scene.cpp" />
     <ClCompile Include="Source Code\Scene\SceneManager.cpp" />
-    <ClCompile Include="Source Code\System\GameManager.cpp" />
-    <ClCompile Include="Source Code\System\OtisEngine.cpp" />
-    <ClCompile Include="Source Code\System\stdafx.cpp" />
-    <ClCompile Include="Source Code\System\Window.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Demo Game\Ball.h" />
@@ -48,27 +49,28 @@
     <ClInclude Include="Demo Game\Pong.h" />
     <ClInclude Include="Demo Game\ScoreEvent.h" />
     <ClInclude Include="Demo Game\ScoreUI.h" />
+    <ClInclude Include="Enemy.h" />
     <ClInclude Include="Source Code\Audio\AudioManager.h" />
-    <ClInclude Include="Source Code\Component\CollisionEvent.h" />
-    <ClInclude Include="Source Code\Component\InputEvent.h" />
+    <ClInclude Include="Source Code\Core\GameManager.h" />
+    <ClInclude Include="Source Code\Core\OtisEngine.h" />
+    <ClInclude Include="Source Code\Core\RandomNumber.h" />
+    <ClInclude Include="Source Code\Core\stdafx.h" />
+    <ClInclude Include="Source Code\Core\targetver.h" />
+    <ClInclude Include="Source Code\Core\Window.h" />
     <ClInclude Include="Source Code\Debug\Debug.h" />
     <ClInclude Include="Source Code\Entity\Entity.h" />
-    <ClInclude Include="Source Code\Entity\GameShape.h" />
-    <ClInclude Include="Source Code\Entity\GameSprite.h" />
-    <ClInclude Include="Source Code\Entity\GameText.h" />
+    <ClInclude Include="Source Code\Entity\ShapeEntity.h" />
+    <ClInclude Include="Source Code\Entity\SpriteEntity.h" />
+    <ClInclude Include="Source Code\Entity\TextEntity.h" />
+    <ClInclude Include="Source Code\Event\CollisionEvent.h" />
     <ClInclude Include="Source Code\Event\GameEvent.h" />
+    <ClInclude Include="Source Code\Event\InputEvent.h" />
     <ClInclude Include="Source Code\Event\IObserver.h" />
     <ClInclude Include="Source Code\Event\Subject.h" />
-    <ClInclude Include="Source Code\Input\Input.h" />
+    <ClInclude Include="Source Code\Input\InputManager.h" />
     <ClInclude Include="Source Code\Physics\World.h" />
     <ClInclude Include="Source Code\Scene\Scene.h" />
     <ClInclude Include="Source Code\Scene\SceneManager.h" />
-    <ClInclude Include="Source Code\System\GameManager.h" />
-    <ClInclude Include="Source Code\System\OtisEngine.h" />
-    <ClInclude Include="Source Code\System\RandomNumber.h" />
-    <ClInclude Include="Source Code\System\stdafx.h" />
-    <ClInclude Include="Source Code\System\targetver.h" />
-    <ClInclude Include="Source Code\System\Window.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
@@ -143,7 +145,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>D:\Local Projects\repos\OtisEngine\OtisEngine\Demo Game;D:\Local Projects\repos\OtisEngine\OtisEngine;D:\Local Projects\repos\OtisEngine\OtisEngine\Source Code\Event;D:\Local Projects\repos\OtisEngine\OtisEngine\Source Code\System;D:\Local Projects\repos\OtisEngine\OtisEngine\Source Code\Scene;D:\Local Projects\repos\OtisEngine\OtisEngine\Source Code\Physics;D:\Local Projects\repos\OtisEngine\OtisEngine\Source Code\Input;D:\Local Projects\repos\OtisEngine\OtisEngine\Source Code\Entity;D:\Local Projects\repos\OtisEngine\OtisEngine\Source Code\Debug;D:\Local Projects\repos\OtisEngine\OtisEngine\Source Code\Component;D:\Local Projects\repos\OtisEngine\OtisEngine\Source Code\Audio;D:\Local Projects\SDKs\SFML-2.5.0 32 bit\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Local Projects\repos\OtisEngine\OtisEngine\Demo Game;D:\Local Projects\repos\OtisEngine\OtisEngine;D:\Local Projects\repos\OtisEngine\OtisEngine\Source Code\Event;D:\Local Projects\repos\OtisEngine\OtisEngine\Source Code\Core;D:\Local Projects\repos\OtisEngine\OtisEngine\Source Code\Scene;D:\Local Projects\repos\OtisEngine\OtisEngine\Source Code\Physics;D:\Local Projects\repos\OtisEngine\OtisEngine\Source Code\Input;D:\Local Projects\repos\OtisEngine\OtisEngine\Source Code\Entity;D:\Local Projects\repos\OtisEngine\OtisEngine\Source Code\Debug;D:\Local Projects\repos\OtisEngine\OtisEngine\Source Code\Audio;D:\Local Projects\SDKs\SFML-2.5.0 32 bit\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PrecompiledHeaderFile />
     </ClCompile>
     <Link>

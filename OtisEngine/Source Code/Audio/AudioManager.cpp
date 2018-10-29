@@ -4,8 +4,8 @@
 
 namespace OE
 {
-	sf::Sound AudioManager::sounds[2];
-	sf::SoundBuffer AudioManager::buffers[2];
+	sf::Sound AudioManager::_sounds[2];
+	sf::SoundBuffer AudioManager::_buffers[2];
 
 	AudioManager::AudioManager()
 	{
@@ -19,10 +19,10 @@ namespace OE
 
 	void AudioManager::PlaySoundEffect(ESounds sound)
 	{
-		if (buffers[0].loadFromFile("Sounds/" + GetSoundFilename(sound)))
+		if (_buffers[0].loadFromFile("Sounds/" + GetSoundFilename(sound)))
 		{
-			sounds[0].setBuffer(buffers[0]);
-			sounds[0].play();
+			_sounds[0].setBuffer(_buffers[0]);
+			_sounds[0].play();
 		}
 		else
 			Debug::Log("Could not find Audio File!");
@@ -30,11 +30,11 @@ namespace OE
 
 	void AudioManager::PlayMusic(ESounds sound)
 	{
-		if (buffers[1].loadFromFile("Sounds/" + GetSoundFilename(sound)))
+		if (_buffers[1].loadFromFile("Sounds/" + GetSoundFilename(sound)))
 		{
-			sounds[1].setBuffer(buffers[1]);
-			sounds[1].setLoop(true);
-			sounds[1].play();
+			_sounds[1].setBuffer(_buffers[1]);
+			_sounds[1].setLoop(true);
+			_sounds[1].play();
 		}
 		else
 			Debug::Log("Could not find Audio File!");

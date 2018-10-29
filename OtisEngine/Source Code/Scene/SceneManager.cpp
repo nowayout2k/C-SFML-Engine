@@ -3,19 +3,19 @@
 
 namespace OE
 {
-	std::unique_ptr<Scene> SceneManager::currentScene = nullptr;
-	void SceneManager::LoadScene(Scene* scene)
+	std::unique_ptr<Scene> SceneManager::_currentScene = nullptr;
+	void SceneManager::LoadScene(Scene* const scene)
 	{
-		currentScene.reset(scene);
+		_currentScene.reset(scene);
 	}
 
 	void SceneManager::RenderScenes(sf::RenderWindow & window)
 	{
-		currentScene->Render(window);
+		_currentScene->Render(window);
 	}
 
 	void SceneManager::UpdateScenes(double deltaTime)
 	{
-		currentScene->Update(deltaTime);
+		_currentScene->Update(deltaTime);
 	}
 }
