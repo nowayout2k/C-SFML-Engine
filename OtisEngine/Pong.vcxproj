@@ -19,12 +19,15 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Collision.cpp" />
     <ClCompile Include="Demo Game\Ball.cpp" />
     <ClCompile Include="Demo Game\GameScene.cpp" />
     <ClCompile Include="Demo Game\Player.cpp" />
     <ClCompile Include="Demo Game\Pong.cpp" />
     <ClCompile Include="Demo Game\ScoreUI.cpp" />
     <ClCompile Include="Enemy.cpp" />
+    <ClCompile Include="GameState.cpp" />
+    <ClCompile Include="Physics.cpp" />
     <ClCompile Include="Source Code\Audio\AudioManager.cpp" />
     <ClCompile Include="Source Code\Core\GameManager.cpp" />
     <ClCompile Include="Source Code\Core\OtisEngine.cpp" />
@@ -38,11 +41,11 @@
     <ClCompile Include="Source Code\Event\Subject.cpp" />
     <ClCompile Include="Source Code\Input\InputManager.cpp" />
     <ClCompile Include="Source Code\main.cpp" />
-    <ClCompile Include="Source Code\Physics\World.cpp" />
     <ClCompile Include="Source Code\Scene\Scene.cpp" />
     <ClCompile Include="Source Code\Scene\SceneManager.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Collision.h" />
     <ClInclude Include="Demo Game\Ball.h" />
     <ClInclude Include="Demo Game\GameScene.h" />
     <ClInclude Include="Demo Game\Player.h" />
@@ -50,6 +53,8 @@
     <ClInclude Include="Demo Game\ScoreEvent.h" />
     <ClInclude Include="Demo Game\ScoreUI.h" />
     <ClInclude Include="Enemy.h" />
+    <ClInclude Include="GameState.h" />
+    <ClInclude Include="Physics.h" />
     <ClInclude Include="Source Code\Audio\AudioManager.h" />
     <ClInclude Include="Source Code\Core\GameManager.h" />
     <ClInclude Include="Source Code\Core\OtisEngine.h" />
@@ -68,7 +73,6 @@
     <ClInclude Include="Source Code\Event\IObserver.h" />
     <ClInclude Include="Source Code\Event\Subject.h" />
     <ClInclude Include="Source Code\Input\InputManager.h" />
-    <ClInclude Include="Source Code\Physics\World.h" />
     <ClInclude Include="Source Code\Scene\Scene.h" />
     <ClInclude Include="Source Code\Scene\SceneManager.h" />
   </ItemGroup>

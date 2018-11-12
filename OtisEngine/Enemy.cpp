@@ -2,7 +2,7 @@
 #include "InputEvent.h"
 #include "Window.h"
 #include "InputManager.h"
-
+#include "Ball.h"
 
 Enemy::Enemy(std::string& textureName, sf::Sprite* const sprite)
 	: SpriteEntity(textureName, sprite)
@@ -18,15 +18,19 @@ void Enemy::OnNotify(std::shared_ptr<OE::GameEvent> gameEvent)
 {
 }
 
-void Enemy::Render(sf::RenderWindow & window)
+void Enemy::UpdateAI(Ball* ball)
 {
-	SpriteEntity::Render(window);
+	if (GetTransform()->getPosition().y + GetSprite()->getLocalBounds().height< ball->GetTransform()->getPosition().y)
+	{
+		GetTransform()->move(sf::Vector2f(0, 3));
+	}
+	else if (GetTransform()->getPosition().y > ball->GetTransform()->getPosition().y)
+	{
+		GetTransform()->move(sf::Vector2f(0, -3));
+	}
 }
 
-void Enemy::Update(const double deltatime)
-{
-	SpriteEntity::Update(deltatime);
-}
+
 
  
 

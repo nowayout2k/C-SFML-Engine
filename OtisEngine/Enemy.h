@@ -10,8 +10,8 @@ public:
  
 	// Inherited via IObserver
 	virtual void OnNotify(std::shared_ptr<OE::GameEvent> gameEvent) override;
-	void Render(sf::RenderWindow & window) override;
-	void Update(const double deltatime) override;
+
+	void UpdateAI(class Ball* ball);
  
 };
 

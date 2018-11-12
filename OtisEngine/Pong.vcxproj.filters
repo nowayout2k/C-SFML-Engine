@@ -78,9 +78,6 @@
     <ClCompile Include="Source Code\Scene\SceneManager.cpp">
       <Filter>Source Files\Scene</Filter>
     </ClCompile>
-    <ClCompile Include="Source Code\Physics\World.cpp">
-      <Filter>Source Files\Physics</Filter>
-    </ClCompile>
     <ClCompile Include="Source Code\Event\Subject.cpp">
       <Filter>Source Files\Event</Filter>
     </ClCompile>
@@ -138,6 +135,15 @@
     <ClCompile Include="Enemy.cpp">
       <Filter>Demo Game\Source</Filter>
     </ClCompile>
+    <ClCompile Include="Physics.cpp">
+      <Filter>Source Files\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="Collision.cpp">
+      <Filter>Source Files\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="GameState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source Code\Scene\Scene.h">
@@ -145,9 +151,6 @@
     </ClInclude>
     <ClInclude Include="Source Code\Scene\SceneManager.h">
       <Filter>Header Files\Scene</Filter>
-    </ClInclude>
-    <ClInclude Include="Source Code\Physics\World.h">
-      <Filter>Header Files\Physics</Filter>
     </ClInclude>
     <ClInclude Include="Source Code\Event\IObserver.h">
       <Filter>Header Files\Event</Filter>
@@ -223,6 +226,15 @@
     </ClInclude>
     <ClInclude Include="Enemy.h">
       <Filter>Demo Game\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Physics.h">
+      <Filter>Header Files\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Collision.h">
+      <Filter>Header Files\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="GameState.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

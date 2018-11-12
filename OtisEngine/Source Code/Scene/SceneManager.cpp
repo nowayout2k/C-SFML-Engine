@@ -7,6 +7,7 @@ namespace OE
 	void SceneManager::LoadScene(Scene* const scene)
 	{
 		_currentScene.reset(scene);
+		scene->SetUpScene();
 	}
 
 	void SceneManager::RenderScenes(sf::RenderWindow & window)

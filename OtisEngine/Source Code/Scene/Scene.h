@@ -5,12 +5,13 @@
 
 namespace OE
 {
-	/*Extendable class for Scenes*/
+	/*Extendable class for Scenes
+	Contians base state info for managing scene Entities*/
 	class Scene
 	{
 	public:
 		Scene() {};
-		virtual ~Scene() {};
+		virtual ~Scene() {}
 
 		/*Draw Objects in scene*/
 		virtual void Render(sf::RenderWindow & window);
@@ -29,6 +30,10 @@ namespace OE
 
 		//return name of scene
 		std::string GetName() const { return name; }
+ 
+		/*Create scene objects here*/
+		virtual void SetUpScene() =0;
+
 	protected:
 		std::string name;
 		std::unordered_map<int, std::unique_ptr<Entity>> entities;

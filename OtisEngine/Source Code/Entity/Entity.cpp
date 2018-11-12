@@ -10,6 +10,7 @@ namespace OE
 
 	Entity::Entity(sf::Transformable* const entity)
 	{
+		isActive = true;
 		isAlive = true;
 		this->id = _nextID++;
 		this->transform.reset(entity);

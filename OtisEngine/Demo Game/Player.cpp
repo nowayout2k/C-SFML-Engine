@@ -8,6 +8,7 @@ Player::Player(std::string& textureName, sf::Sprite* const sprite)
 	: SpriteEntity(textureName, sprite)
 {
 	OE::InputManager::GetInstance()->AddObserver(this);
+
 }
 
 

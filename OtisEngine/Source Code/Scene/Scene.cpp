@@ -2,12 +2,17 @@
 #include "Scene.h"
 namespace OE
 {
+
 	void Scene::Render(sf::RenderWindow & window)
 	{
 		/*Draw each object in the scene*/
 		for (auto itr = entities.begin(); itr != entities.end(); ++itr)
 		{
-			itr->second->Render(window);
+			if (itr->second->GetIsActive())
+			{
+				itr->second->Render(window);
+			}
+
 		}
 	}
 
